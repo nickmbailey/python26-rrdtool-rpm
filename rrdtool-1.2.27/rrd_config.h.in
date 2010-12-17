@@ -1,0 +1,464 @@
+/* rrd_config.h.in.  Generated from configure.ac by autoheader.  */
+
+
+
+#ifndef RRD_CONFIG_H
+#define RRD_CONFIG_H
+/* IEEE can be prevented from raising signals with fpsetmask(0) */
+#undef MUST_DISABLE_FPMASK
+
+/* IEEE math only works if SIGFPE gets actively set to IGNORE */
+
+#undef MUST_DISABLE_SIGFPE
+
+/* realloc does not support NULL as argument */
+#undef NO_NULL_REALLOC
+
+/* lets enable madvise defines in NetBSD */
+#if defined(__NetBSD__)
+# if !defined(_NETBSD_SOURCE)
+#  define _NETBSD_SOURCE
+# endif
+#endif
+
+ 
+
+/* Define to 1 if you have the `chdir' function. */
+#undef HAVE_CHDIR
+
+/* Define to 1 if you have the `chroot' function. */
+#undef HAVE_CHROOT
+
+/* Define to 1 if you have the `class' function. */
+#undef HAVE_CLASS
+
+/* Define to 1 if you have the declaration of `fdatasync', and to 0 if you
+   don't. */
+#undef HAVE_DECL_FDATASYNC
+
+/* Define to 1 if you have the declaration of `madvise', and to 0 if you
+   don't. */
+#undef HAVE_DECL_MADVISE
+
+/* Define to 1 if you have the declaration of `posix_fadvise', and to 0 if you
+   don't. */
+#undef HAVE_DECL_POSIX_FADVISE
+
+/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
+   */
+#undef HAVE_DIRENT_H
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
+#undef HAVE_DOPRNT
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the <features.h> header file. */
+#undef HAVE_FEATURES_H
+
+/* Define to 1 if you have the `finite' function. */
+#undef HAVE_FINITE
+
+/* Define to 1 if you have the <float.h> header file. */
+#undef HAVE_FLOAT_H
+
+/* Define to 1 if you have the `fpclass' function. */
+#undef HAVE_FPCLASS
+
+/* Define to 1 if you have the `fpclassify' function. */
+#undef HAVE_FPCLASSIFY
+
+/* Define to 1 if you have the `fp_class' function. */
+#undef HAVE_FP_CLASS
+
+/* Define to 1 if you have the <fp_class.h> header file. */
+#undef HAVE_FP_CLASS_H
+
+/* Define to 1 if you have the `getpagesize' function. */
+#undef HAVE_GETPAGESIZE
+
+/* Define to 1 if you have the `getrusage' function. */
+#undef HAVE_GETRUSAGE
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define to 1 if you have the `getuid' function. */
+#undef HAVE_GETUID
+
+/* Define to 1 if you have the <ieeefp.h> header file. */
+#undef HAVE_IEEEFP_H
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `isfinite' function. */
+#undef HAVE_ISFINITE
+
+/* Define to 1 if you have the `isinf' function. */
+#undef HAVE_ISINF
+
+/* Define to 1 if you have the `isnan' function. */
+#undef HAVE_ISNAN
+
+/* Define to 1 if you have the `m' library (-lm). */
+#undef HAVE_LIBM
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if you have the `madvise' function. */
+#undef HAVE_MADVISE
+
+/* Define to 1 if you have the <malloc.h> header file. */
+#undef HAVE_MALLOC_H
+
+/* Define to 1 if you have the <math.h> header file. */
+#undef HAVE_MATH_H
+
+/* Define to 1 if you have the `mbstowcs' function. */
+#undef HAVE_MBSTOWCS
+
+/* Define to 1 if you have the `memmove' function. */
+#undef HAVE_MEMMOVE
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `mktime' function. */
+#undef HAVE_MKTIME
+
+/* Define to 1 if you have a working `mmap' system call. */
+#undef HAVE_MMAP
+
+/* Define to 1 if you have the `msync' function. */
+#undef HAVE_MSYNC
+
+/* Define to 1 if you have the `munmap' function. */
+#undef HAVE_MUNMAP
+
+/* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
+#undef HAVE_NDIR_H
+
+/* Define to 1 if you have the `opendir' function. */
+#undef HAVE_OPENDIR
+
+/* Define to 1 if you have the `posix_fadvise' function. */
+#undef HAVE_POSIX_FADVISE
+
+/* Define to 1 if you have the `posix_madvise' function. */
+#undef HAVE_POSIX_MADVISE
+
+/* Define if you have POSIX threads libraries and header files. */
+#undef HAVE_PTHREAD
+
+/* Define to 1 if you have the `readdir' function. */
+#undef HAVE_READDIR
+
+/* Define to 1 if you have the `setlocale' function. */
+#undef HAVE_SETLOCALE
+
+/* Define to 1 if you have the `snprintf' function. */
+#undef HAVE_SNPRINTF
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strchr' function. */
+#undef HAVE_STRCHR
+
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define to 1 if you have the `strerror_r' function. */
+#undef HAVE_STRERROR_R
+
+/* Define to 1 if you have the `strftime' function. */
+#undef HAVE_STRFTIME
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+   */
+#undef HAVE_SYS_DIR_H
+
+/* Define to 1 if you have the <sys/mman.h> header file. */
+#undef HAVE_SYS_MMAN_H
+
+/* Define to 1 if you have the <sys/ndir.h> header file, and it defines `DIR'.
+   */
+#undef HAVE_SYS_NDIR_H
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#undef HAVE_SYS_RESOURCE_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/times.h> header file. */
+#undef HAVE_SYS_TIMES_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the `tzset' function. */
+#undef HAVE_TZSET
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the `vprintf' function. */
+#undef HAVE_VPRINTF
+
+/* Define to 1 if you have the `vsnprintf' function. */
+#undef HAVE_VSNPRINTF
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to necessary symbol if this constant uses a non-standard name on
+   your system. */
+#undef PTHREAD_CREATE_JOINABLE
+
+/* Vertical label angle: 90.0 (default) or 270.0 */
+#undef RRDGRAPH_YLEGEND_ANGLE
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Define to 1 if your <sys/time.h> declares `struct tm'. */
+#undef TM_IN_SYS_TIME
+
+/* Version number of package */
+#undef VERSION
+
+/* Define to 1 if your processor stores words with the most significant byte
+   first (like Motorola and SPARC, unlike Intel and VAX). */
+#undef WORDS_BIGENDIAN
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+
+#ifdef HAVE_FEATURES_H
+#define _XOPEN_SOURCE 600
+#undef _BSD_SOURCE /* comment to prevent configure from modifying this line */   
+#define _BSD_SOURCE 1
+# include <features.h>
+#endif
+
+#ifdef HAVE_ERRNO_H
+# include <errno.h>
+#endif
+
+#if defined(HAVE_SYS_MMAN_H)
+#include <sys/mman.h>
+#endif
+
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+
+#ifdef HAVE_SYS_PARAM_H
+# include <sys/param.h>
+#endif
+#ifndef MAXPATH
+# ifdef PATH_MAX
+#  define MAXPATH PATH_MAX
+# endif
+#endif
+#ifndef MAXPATH
+/* else try the BSD variant */
+# ifdef MAXPATHLEN
+#  define MAXPATH MAXPATHLEN
+# endif
+#endif
+
+#if !defined HAVE_MADVISE && defined HAVE_POSIX_MADVISE
+/* use posix_madvise family */
+# define madvise posix_madvise
+# define MADV_NORMAL POSIX_MADV_NORMAL
+# define MADV_RANDOM POSIX_MADV_RANDOM
+# define MADV_SEQUENTIAL POSIX_MADV_SEQUENTIAL
+# define MADV_WILLNEED POSIX_MADV_WILLNEED
+# define MADV_DONTNEED POSIX_MADV_DONTNEED
+#endif
+
+#if defined POSIX_MADV_RANDOM && !defined MADV_RANDOM
+#define MADV_RANDOM POSIX_MADV_RANDOM
+#endif
+
+
+
+#if defined HAVE_MADVISE || defined HAVE_POSIX_MADVISE
+# define USE_MADVISE 1
+#endif
+
+#ifdef HAVE_SYS_STAT_H
+# include <sys/stat.h>
+#endif
+
+#ifdef HAVE_FCNTL_H
+#include <fcntl.h>
+#endif
+
+#ifdef HAVE_UNISTD_H
+# include <unistd.h>
+#endif
+
+#ifdef TIME_WITH_SYS_TIME
+# include <sys/time.h>
+# include <time.h>
+#else
+# ifdef HAVE_SYS_TIME_H
+#  include <sys/time.h>
+# else
+#  include <time.h>
+# endif
+#endif
+
+#ifdef HAVE_SYS_TIMES_H
+# include <sys/times.h>
+#endif
+
+#ifdef HAVE_SYS_RESOURCE_H
+# include <sys/resource.h>
+#if (defined(__svr4__) && defined(__sun__))
+/* Solaris headers (pre 2.6) don't have a getrusage prototype.
+   Use this instead. */
+extern int getrusage(int, struct rusage *);
+#endif /* __svr4__ && __sun__ */
+#endif
+
+/* define strrchr, strchr and memcpy, memmove in terms of bsd funcs
+   make sure you are NOT using bcopy, index or rindex in the code */
+      
+#ifdef STDC_HEADERS
+# include <string.h>
+#else
+# ifndef HAVE_STRCHR
+#  define strchr index
+#  define strrchr rindex
+# endif
+char *strchr (), *strrchr ();
+# ifndef HAVE_MEMMOVE
+#  define memcpy(d, s, n) bcopy ((s), (d), (n))
+#  define memmove(d, s, n) bcopy ((s), (d), (n))
+# endif
+#endif
+
+#ifdef NO_NULL_REALLOC
+# define rrd_realloc(a,b) ( (a) == NULL ? malloc( (b) ) : realloc( (a) , (b) ))
+#else
+# define rrd_realloc(a,b) realloc((a), (b))
+#endif
+
+#ifdef NEED_MALLOC_MALLOC_H
+#  include <malloc/malloc.h>
+#endif
+
+#ifdef HAVE_MATH_H
+#  include <math.h>
+#endif
+
+#ifdef HAVE_FLOAT_H
+#  include <float.h>
+#endif
+
+#ifdef HAVE_IEEEFP_H
+#  include <ieeefp.h>
+#endif
+
+#ifdef HAVE_FP_CLASS_H
+#  include <fp_class.h>
+#endif
+
+/* for Solaris */
+#if (! defined(HAVE_ISINF) && defined(HAVE_FPCLASS))
+#  define HAVE_ISINF 1
+#  ifdef isinf
+#  undef isinf /* confuse autoconf */
+#  endif
+#  define isinf(a) (fpclass(a) == FP_NINF || fpclass(a) == FP_PINF)
+#endif
+
+/* solaris 10 it defines isnan such that only forte can compile it ... bad bad  */
+#if (defined(HAVE_ISNAN) && defined(isnan) && defined(HAVE_FPCLASS))
+#  undef isnan  /* confuse autoconf to NOT remove this */
+#  define isnan(a) (fpclass(a) == FP_SNAN || fpclass(a) == FP_QNAN)
+#endif
+
+/* for OSF1 Digital Unix */
+#if (! defined(HAVE_ISINF) && defined(HAVE_FP_CLASS) && defined(HAVE_FP_CLASS_H))
+#  define HAVE_ISINF 1
+#  define isinf(a) (fp_class(a) == FP_NEG_INF || fp_class(a) == FP_POS_INF)
+#endif
+
+#if (! defined(HAVE_ISINF) && defined(HAVE_FPCLASSIFY) && defined(FP_PLUS_INF) && defined(FP_MINUS_INF))
+#  define HAVE_ISINF 1
+#  define isinf(a) (fpclassify(a) == FP_MINUS_INF || fpclassify(a) == FP_PLUS_INF)
+#endif
+
+#if (! defined(HAVE_ISINF) && defined(HAVE_FPCLASSIFY) && defined(FP_INFINITE))
+#  define HAVE_ISINF 1
+#  define isinf(a) (fpclassify(a) == FP_INFINITE)
+#endif
+
+/* for AIX */
+#if (! defined(HAVE_ISINF) && defined(HAVE_CLASS))
+#  define HAVE_ISINF 1
+#  define isinf(a) (class(a) == FP_MINUS_INF || class(a) == FP_PLUS_INF)
+#endif
+
+#if (! defined (HAVE_FINITE) && defined (HAVE_ISFINITE))
+#  define HAVE_FINITE 1
+#  define finite(a) isfinite(a)
+#endif
+
+#if (! defined(HAVE_FINITE) && defined(HAVE_ISNAN) && defined(HAVE_ISINF))
+#  define HAVE_FINITE 1
+#  define finite(a) (! isnan(a) && ! isinf(a))
+#endif
+
+#ifndef HAVE_FINITE
+#error "Can't compile without finite function"
+#endif
+
+#ifndef HAVE_ISINF
+#error "Can't compile without isinf function"
+#endif
+
+#endif /* RRD_CONFIG_H */
+

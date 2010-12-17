@@ -1,0 +1,3441 @@
+2008-02-17 10:09  oetiker
+
+	* rrdtool-1.2-release: prepare for the release of rrdtool-1.2.27
+
+2008-02-17 10:08  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_lastupdate.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prepare for
+	  1.2.27 release
+
+2008-02-14 07:25  oetiker
+
+	* doc/rrdcreate.pod, doc/rrdgraph.pod, doc/rrdgraph_graph.pod,
+	  doc/rrdgraph_rpn.pod, doc/rrdtutorial.pod: fixes for better web
+	  rendering
+
+2008-02-04 18:17  oetiker
+
+	* COPYRIGHT: added ZPL 2.1 to floss exception
+
+2008-02-01 06:52  oetiker
+
+	* src/rrd_graph.c, trunk/program/src/rrd_graph.c: fixed parsing of
+	  fontnames with embeded spaces
+
+2008-01-14 16:47  oetiker
+
+	* bindings/tcl/tclrrd.c, configure.ac, src/rrd_cgi.c: * fix fadvice
+	  and madvice inclusion ... again * fix rrdcgi warning * fix
+	  warnings in tcl bindings -- Peter Breitenlohner peb mppmu.mpg.de
+
+2008-01-12 18:36  oetiker
+
+	* src/rrd_graph.c: weekday and time are too tight
+
+2007-12-08 22:17  oetiker
+
+	* configure.ac: fixing the solaris build
+
+2007-11-23 18:18  oetiker
+
+	* netware/Makefile, src/rrd_update.c, win32/Makefile: updates for
+	  netware and mingw32 ... allows for crosscompilation
+
+2007-11-22 12:33  oetiker
+
+	* src/rrd_update.c: make update compile for mingw32 3.4.5
+
+2007-11-21 10:51  oetiker
+
+	* configure.ac: fixedspellingfor netbsd
+
+2007-11-21 06:57  oetiker
+
+	* bindings/perl-shared/Makefile.PL, configure.ac, src/rrd_tool.h,
+	  src/rrd_update.c: * improve portability of compile environment to
+	  netbsd and solaris
+
+2007-11-20 00:15  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_lastupdate.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prepare for the
+	  release of rrdtool-1.2.26
+
+2007-11-19 23:40  oetiker
+
+	* src/rrd_graph.c: when checking if min and max were equal, the
+	  action aplied was not working for negative values of min and max.
+
+2007-11-19 23:40  oetiker
+
+	* configure.ac, src/rrd_tool.h: strings was not included ev if it
+	  was around
+
+2007-11-19 16:50  oetiker
+
+	* src/rrd_gfx.c: fix pointer in png image
+
+2007-11-14 13:53  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/rrd.h, src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prepare for the
+	  release of rrdtool-1.2.25
+
+2007-11-14 13:53  oetiker
+
+	* src/pngsize.c: make aix users happy and compile there too
+
+2007-11-14 13:53  oetiker
+
+	* src/rrd_open.c: don't exit when fadvise does not work .. after all
+	  we can live without it ...
+
+2007-11-13 02:21  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c, src/pngsize.c,
+	  src/rrd.h, src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.24
+
+2007-11-13 02:18  oetiker
+
+	* configure.ac: updated for 1.2.24
+
+2007-11-13 02:16  oetiker
+
+	* src/rrd_create.c: revert the dontneed fadvise patch this is only
+	  for 1.3
+
+2007-11-13 02:13  oetiker
+
+	* src/rrd_fetch.c: revert the dontneed patch ... this is for 1.3
+	  exclusively
+
+2007-11-08 10:13  oetiker
+
+	* bindings/ruby/main.c: must use int2num to prevent overflows --
+	  Mike Perham mperham gmail.com
+
+2007-09-02 16:47  oetiker
+
+	* doc/rrdgraph_graph.pod: horizontal is the correct spelling
+
+2007-08-01 15:25  oetiker
+
+	* src/rrd_xport.c: fixed 64bit portability error ... unigned long is
+	  not equal to int
+
+2007-07-25 20:32  oetiker
+
+	* src/rrd_update.c: check if intput is integer in any case not only
+	  when the previouse value wave != U
+
+2007-07-16 06:34  oetiker
+
+	* bindings/ruby/main.c: fixed rrd_featch and added rrd_info to ruby
+	  bindings
+
+2007-07-12 20:33  oetiker
+
+	* doc/rrdtutorial.pod: improved wording
+
+2007-07-11 23:06  oetiker
+
+	* src/rrd_create.c: stop rrd_create from leaking on failure ... vito
+	  caputo
+
+2007-07-05 15:14  oetiker
+
+	* src/rrd_graph_helper.c: fix potential segfault ... if time_t is
+	  not a %li 5~
+
+2007-07-05 15:14  oetiker
+
+	* bindings/tcl/Makefile.am: fix tcl build system
+
+2007-06-15 21:41  oetiker
+
+	* rrdtool.spec: rrdtool.spec from Jarod "redhat" Wilson
+
+2007-06-13 16:50  oetiker
+
+	* bindings/ruby/main.c: be more helpful when raising rb_eTypeError
+	  in string_arr string_arr_new(VALUE rb_strings). This patch
+	  indicates which index is in error as well as the type you are
+	  erroneously passing. --anonymous
+
+2007-05-30 11:26  oetiker
+
+	* src/rrd_update.c: dropping cache after update does not help (in
+	  this implementation)
+
+2007-05-22 20:46  oetiker
+
+	* configure.ac: fixed spelling
+
+2007-05-22 20:44  oetiker
+
+	* configure.ac, src/rrd_tool.c, src/rrd_tool.h, src/rrd_update.c: *
+	  better tests for madvise, fadvise and fdatasync * fix inclusion of
+	  fcntl.h * clenups for configure.ac -- Bernhard Fischer rep dot nop
+	  gmail com
+
+2007-05-19 05:47  oetiker
+
+	* configure.ac: update defines according to manual pageentry
+
+2007-05-18 16:40  oetiker
+
+	* configure.ac, src/rrd_update.c: added madvise MADV_RANDOM is
+	  rrd_update uses mmap
+
+2007-05-18 11:56  oetiker
+
+	* configure.ac, src/rrd_create.c, src/rrd_fetch.c, src/rrd_update.c:
+	  * dropping in rrd_update is probably overkill since we may be
+	  dropping too much. * in create we have to flush before dropping. *
+	  read fcntl.h after defining the __USE_XOPEN2K * fix drop code in
+	  fetch ...
+
+2007-05-17 11:38  oetiker
+
+	* configure.ac, src/rrd_create.c, src/rrd_fetch.c, src/rrd_open.c,
+	  src/rrd_update.c: now the fadvise code actually compiles ... let
+	  the testing begin.
+
+2007-05-17 08:44  oetiker
+
+	* examples/perftest.pl.in: new better ? performance test ... work in
+	  progress
+
+2007-05-17 08:44  oetiker
+
+	* configure.ac, src/Makefile.am, src/rrd_create.c, src/rrd_fetch.c,
+	  src/rrd_open.c, src/rrd_update.c: added posix_fadvise support
+	  (untested) ... this should help performance by stopping read-ahead
+	  and droping buffer cache for all rrd data except the file header
+	  portion. Newly created files are fdsynced to disk and released
+	  from cache after creation, to soften the blow on buffer cache by
+	  creating new rrds.
+
+2007-05-16 20:35  oetiker
+
+	* src/rrd_open.c: remove tabs and replace with 8 spaces
+
+2007-05-15 08:39  oetiker
+
+	* bindings/Makefile.am: use libdir instead of exec_prefix/lib ...
+	  maybe someone wants their libraries in another place
+
+2007-05-15 08:36  oetiker
+
+	* bindings/Makefile.am, bindings/python/setup.py: yet another
+	  attempt to make the python build environment REALY cool
+
+2007-05-09 15:26  oetiker
+
+	* bindings/Makefile.am, bindings/python/setup.py: make sure the
+	  python extension gets the final resting place of the rrdlibrary
+	  compiled in ...
+
+2007-05-08 15:10  oetiker
+
+	* bindings/Makefile.am: ruby complained about finding a previous
+	  copy of the rrdtool extension ... very odd thing actually ...
+	  adding RUBYARCHDIR= seems to help ...
+
+2007-05-06 19:38  oetiker
+
+	* src/rrd_graph.c: don't use round since it is c99 ... use
+	  floor(x+0.5) for positive numbers instead.
+
+2007-05-06 08:50  oetiker
+
+	* src/rrd_hw.c: print the name of the HW cf in debug mode -- Helge
+	  Oldach
+
+2007-05-03 12:49  oetiker
+
+	* src/rrd_graph.c: added some more rounding for int to float
+	  comparisons
+
+2007-05-03 12:43  oetiker
+
+	* src/rrd_graph.c: Testing an double and an integer for equality is
+	  bound to produce odd results on times. Don't do it! --
+	  rrdtool@oldach.net
+
+2007-05-02 18:06  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.23
+
+2007-05-02 18:05  oetiker
+
+	* bindings/Makefile.am: fix python install for virgin systems
+
+2007-05-02 15:31  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.22
+
+2007-05-02 15:31  oetiker
+
+	* README, bindings/perl-shared/RRDs.ppd,
+	  bindings/perl-shared/ntmake.pl, debian/copyright, debian/watch,
+	  doc/rrdtutorial.es.pod, doc/rrdtutorial.pod, doc/see_also.inc:
+	  fixed old urls in code
+
+2007-05-02 15:23  oetiker
+
+	* bindings/Makefile.am: fix python for staged installs
+
+2007-05-02 05:08  oetiker
+
+	* bindings/tcl/tclrrd.c: fixed path to rrd_format.h in tcl bindings
+
+2007-05-01 20:41  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.21
+
+2007-05-01 20:40  oetiker
+
+	* src/rrd_graph.c: if the graph goes 'down' minval must be hanged
+	  instead
+
+2007-05-01 16:36  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_lastupdate.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prepare for the
+	  release of rrdtool-1.2.20
+
+2007-05-01 16:24  oetiker
+
+	* netware/Makefile, win32/Makefile: updated win32 and netware
+	  Makefiles -- Guenter Knauf
+
+2007-05-01 16:23  oetiker
+
+	* src/rrd_create.c, src/rrd_update.c: added some const casts
+
+2007-05-01 16:19  oetiker
+
+	* doc/rrdgraph.pod, src/rrd_graph.c, src/rrd_graph.h: added
+	  --alt-autoscale-min (see --alt-autoscale-max) -- Helge Oldach
+
+2007-04-10 05:43  oetiker
+
+	* src/rrd_graph.c: untabified rrd_graph.c
+
+2007-04-10 05:41  oetiker
+
+	* src/rrd_graph.c: use the shorthand for vidx ...
+
+2007-04-10 05:27  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph.h: the rrd_graph_check_vname
+	  function is not used anywhere in the code ...
+
+2007-04-06 07:28  oetiker
+
+	* src/rrd_gfx.c: release font resources after thy have been used ...
+	  -- Travis Spencer
+
+2007-04-02 06:21  oetiker
+
+	* doc/rrdthreads.pod, src/fnv.h, src/hash_32.c, src/rrd.h,
+	  src/rrd_create.c, src/rrd_fetch.c, src/rrd_format.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_tool.h,
+	  src/rrd_update.c: new function rrd_fetch_r() (and make the strings
+	  const char* instead of char*). The only difference between
+	  rrd_fetch_r() and rrd_fetch_fn() is that rrd_fetch_r() receives
+	  the consolidation function as a string (instead of an enum cf_en)
+	  and is thread-safe -- Sam Umbach
+
+2007-04-02 06:18  oetiker
+
+	* src/rrd_restore.c: make xml2rrd more robust on invalid input --
+	  Florian Forster
+
+2007-03-29 19:08  oetiker
+
+	* doc/rrdruby.pod: added vardef
+
+2007-03-15 21:10  oetiker
+
+	* src/rrd_tool.c: fix the snprintf call for vtag ... it was using
+	  the wrong size -- kili
+
+2007-03-15 21:03  oetiker
+
+	* src/rrd_thread_safe.c: fixed strerror_r usage ... #85
+
+2007-03-11 13:08  oetiker
+
+	* Makefile.am, bindings/Makefile.am, doc/Makefile.am,
+	  examples/Makefile.am, netware/Makefile, win32/Makefile,
+	  win32/rrd.dsp, win32/rrdtool.dsp: fix netware and win32 makefiles
+	  for new getopt names
+
+2007-03-11 13:04  oetiker
+
+	* src/art_rgba_svp.h, src/fnv.h, src/gdpng.c, src/hash_32.c,
+	  src/parsetime.c, src/parsetime.h, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_getopt.c,
+	  src/rrd_getopt.h, src/rrd_getopt1.c, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph.h, src/rrd_graph_helper.c,
+	  src/rrd_hw.c, src/rrd_hw.h, src/rrd_info.c,
+	  src/rrd_is_thread_safe.h, src/rrd_last.c, src/rrd_lastupdate.c,
+	  src/rrd_nan_inf.c, src/rrd_nan_inf.h, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c, src/strftime.c, src/strftime.h, src/unused.h,
+	  src/win32comp.c: enable ID keyword in all source files
+
+2007-03-11 12:57  oetiker
+
+	* examples/Makefile.am: do not use gnuisms in Makefile rules ($<)
+
+2007-03-11 12:41  oetiker
+
+	* netware/Makefile: use Guenters latest Netware Makefile ...
+
+2007-03-10 17:44  oetiker
+
+	* configure.ac: axe the double quotes on $perlcc in configure to
+	  allow for program names with arguments.
+
+2007-03-10 17:36  oetiker
+
+	* src/rrd_update.c: integers can be negative ... fixed the test for
+	  this in rrd_update -- rians cc usu edu
+
+2007-03-03 11:03  oetiker
+
+	* Makefile.am, bindings/ruby/extconf.rb, configure.ac: * build
+	  extensions last since this seems to be most likely to fail * do
+	  more testing before building the ruby extension
+
+2007-02-24 17:23  oetiker
+
+	* src/rrd_dump.c, src/rrd_info.c, src/rrd_tune.c: fix memmory
+	  problem in rrd_dump.c
+
+2007-02-14 18:54  oetiker
+
+	* doc/rrdgraph_rpn.pod, src/rrd_rpncalc.c, src/rrd_rpncalc.h: new
+	  operator ABS added --
+
+2007-02-14 18:48  oetiker
+
+	* src/Makefile.am, src/getopt.c, src/getopt.h, src/getopt1.c,
+	  src/rrd_getopt.c, src/rrd_getopt.h, src/rrd_getopt1.c,
+	  src/rrd_tool.h: renamed getopt to rrd_getopt to avoid confusion on
+	  some systems ...
+
+2007-02-14 18:47  oetiker
+
+	* src/rrd_tool.c: cosmetic fix for usage message -- günter knauff
+
+2007-02-14 18:46  oetiker
+
+	* Makefile.am: added new win32 component to the release tarball
+
+2007-02-14 18:46  oetiker
+
+	* src/get_ver.awk, win32/rrd.dsp, win32/rrd_config.h.msvc,
+	  win32/rrdtool.dsp: updates to the windows build system by guenter
+	  knauff
+
+2007-02-14 06:53  oetiker
+
+	* doc/rrdgraph.pod, src/rrd_graph.c, src/rrd_graph.h: allow
+	  --units-length to reserve label space even when --y-grid=none is
+	  in effect [#75], tobi
+
+2007-02-14 06:33  oetiker
+
+	* src/parsetime.c: parsing absolute time should not send us 30,000
+	  years into the future -- Tatsuki Makino tatsuki_makino hotmail.com
+
+2007-02-14 06:31  oetiker
+
+	* src/rrd_cgi.c: Printstrftime on rrd_cgi.c returns an illegal
+	  value. It causes segmentation fault error. -- Tatsuki Makino
+	  tatsuki_makino hotmail.com
+
+2007-02-09 22:19  oetiker
+
+	* netware/Makefile, src/rrd_tool.h, win32/Makefile: more build
+	  patches from Günter Knauf
+
+2007-02-08 06:01  oetiker
+
+	* netware/Makefile, win32/Makefile: updates for Win32 and NW
+	  Makefiles -- Guenter Knauf
+
+2007-02-08 05:54  oetiker
+
+	* src/Makefile.am: added get_ver.awk to release
+
+2007-02-08 05:51  oetiker
+
+	* configure.ac: there is no Makefile.in for python anymore!
+
+2007-02-07 21:35  oetiker
+
+	* src/rrd_gfx.c: DPRINTF may not be the ideal define ... use
+	  something more RRDish ... like RRDPRINTF
+
+2007-02-07 21:35  oetiker
+
+	* Makefile.am, configure.ac: use setup.py for python install and
+	  build work instad of trying todo it on our own
+
+2007-02-07 21:31  oetiker
+
+	* bindings/Makefile.am: added Makefile targets for python
+
+2007-02-07 21:30  oetiker
+
+	* bindings/python/Makefile.am, bindings/python/Setup.in,
+	  bindings/python/setup.py: python does no get built externally
+
+2007-02-02 18:22  oetiker
+
+	* COPYRIGHT: added IBM Public License to the list of Exceptions
+
+2007-02-02 12:19  oetiker
+
+	* src/rrd_gfx.c, src/rrd_rpncalc.c: increasse portability (no //
+	  comment, no ... arguments for cpp)
+
+2007-02-01 22:00  oetiker
+
+	* bindings/tcl/tclrrd.c: we should use the headers from the local
+	  rrdtool setup and not the system ones!
+
+2007-02-01 05:51  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool-1.2-release, rrdtool.spec,
+	  src/gdpng.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_lastupdate.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prepare for the
+	  release of rrdtool-1.2.19
+
+2007-02-01 05:45  oetiker
+
+	* bindings/python/Makefile.am: libtool builds shared libraries
+	  anyway, no need for extra LDFLAGS that bite non GNU ld versions
+
+2007-01-29 16:47  oetiker
+
+	* src/rrd_tool.c: resolve snprintf overflow warning by using sizeof
+	  -- Anna Bernathova suse cz
+
+2007-01-23 20:54  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.18
+
+2007-01-23 20:52  oetiker
+
+	* src/rrd_fetch.c: the change from R920 to fetch was not helping ...
+	  no low res got prefered in non full coverage situations ..
+
+2007-01-23 17:30  oetiker
+
+	* src/rrd_graph.c: another control sequence that got lost ...
+
+2007-01-23 08:28  oetiker
+
+	* src/rrd_graph_helper.c: read up to full potential length of
+	  gdp->rrd
+
+2007-01-22 16:34  oetiker
+
+	* doc/rrdgraph_graph.pod: added missing B formatting instruction
+
+2007-01-22 10:49  oetiker
+
+	* rrdtool-1.2-release: create non version link
+
+2007-01-22 10:33  oetiker
+
+	* src/rrd_graph.c: prepare for the release of rrdtool-1.2.17
+
+2007-01-22 10:29  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.17
+
+2007-01-22 10:28  oetiker
+
+	* doc/rrdgraph_graph.pod, src/rrd_graph.c: introduced \n as an alias
+	  for \l since people seem to be using it despite the documentation
+	  not talking about this ... so now it is official and I bet there
+	  will soon be people asking why this was only working at the end of
+	  a line. -- tobi
+
+2007-01-21 22:22  oetiker
+
+	* doc/rrdgraph_examples.pod: removed mentiones of \n ...
+
+2007-01-20 22:54  oetiker
+
+	* bindings/Makefile.am: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 22:48  oetiker
+
+	* bindings/Makefile.am: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 22:22  oetiker
+
+	* bindings/Makefile.am: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 20:19  oetiker
+
+	* rrdtool-1.2-release: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 20:17  oetiker
+
+	* rrdtool-1.2-release: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 20:16  oetiker
+
+	* rrdtool-1.2-release: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 20:03  oetiker
+
+	* bindings/tcl/tclrrd.c: this did not compile after integrating the
+	  new fetchlast command -- Andy Riebs
+
+2007-01-20 16:41  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool-1.2-release, rrdtool.spec,
+	  src/Makefile.am, src/gdpng.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_lastupdate.c, src/rrd_not_thread_safe.c,
+	  src/rrd_open.c, src/rrd_resize.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h, src/rrd_stat.c,
+	  src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c, src/rrd_tool.c,
+	  src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h,
+	  src/rrdupdate.c: prepare for the release of rrdtool-1.2.16
+
+2007-01-20 16:39  oetiker
+
+	* Makefile.am, configure.ac, rrdtool-1.2-release: get ready for
+	  1.2.16 release
+
+2007-01-18 23:43  oetiker
+
+	* doc/rrdlastupdate.pod: aargh another missing bit from lastupdate
+	  added ...
+
+2007-01-17 23:35  oetiker
+
+	* netware/Makefile, src/rrd_lastupdate.c, win32/Makefile: finish
+	  integration of lastupdate commmand ...
+
+2007-01-17 21:31  oetiker
+
+	* acinclude.m4, bindings/tcl/tclrrd.c, doc/Makefile.am,
+	  src/Makefile.am, src/rrd_tool.c, src/rrd_tool.h, src/rrd_update.c:
+	  New functions lastupdate to efficiently get the last values fed
+	  into the rrd ... this also changes that the last values get stored
+	  even for ABSOLUTE and GAUGE data sources ... -- andy.riebs hp.com
+
+2006-12-16 16:14  oetiker
+
+	* src/rrd_error.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c:
+	  add missing \0 to the end of several strncpy strings
+
+2006-12-16 16:13  oetiker
+
+	* src/rrd_update.c: replace malloc/strncpy by strdup add \0 to the
+	  end of several strncpy strings add missing free fix error string
+	  rendering :... makes no sense here
+
+2006-12-16 16:11  oetiker
+
+	* src/rrd.h: move headers around to make more sense
+
+2006-12-16 16:10  oetiker
+
+	* src/rrd_not_thread_safe.c: init the context on first call
+
+2006-12-16 16:05  oetiker
+
+	* src/rrd_graph.h: make sure there is ample space in the static
+	  strings
+
+2006-12-16 16:04  oetiker
+
+	* src/rrd_graph.c: oops 99 is the last item
+
+2006-12-16 16:02  oetiker
+
+	* src/rrd_graph.c: it is sufficient to set the last item to 0
+
+2006-12-16 16:02  oetiker
+
+	* src/Makefile.am: getopt is required for rrdupdate too (there are
+	  platforms where this is not in libc ... eg solaris)
+
+2006-12-16 16:01  oetiker
+
+	* src/rrdupdate.c: we have 2006 now
+
+2006-12-16 15:56  oetiker
+
+	* src/rrd_not_thread_safe.c: it makes no sense allocating an array
+	  and then asiging it to a fixed string ... this caused stuff to
+	  crash badly as long error strings were assigned.
+
+2006-12-11 19:11  oetiker
+
+	* doc/rrdbuild.pod: added note on alternate CFLAGS for Forte
+
+2006-12-07 19:51  oetiker
+
+	* src/rrd_graph.c: c is a valid formatting character
+
+2006-11-19 11:15  oetiker
+
+	* src/rrd_graph.c: fixed typo
+
+2006-11-06 06:53  oetiker
+
+	* src/rrd_fetch.c: when fetching, don't pick a higher res rra just
+	  because it's coverage at the 'end' of the requested range is
+	  better ... -- Sebastian Pachuta seba123 seba123.webd.pl
+
+2006-10-27 14:03  oetiker
+
+	* examples/perftest.pl.in: use integer time
+
+2006-10-26 22:26  oetiker
+
+	* configure.ac, examples/Makefile.am, examples/perftest.pl.in: added
+	  perftest tool
+
+2006-10-25 17:19  oetiker
+
+	* src/Makefile.am: do not distribute windows files anymore ...
+
+2006-10-25 17:18  oetiker
+
+	* Makefile.am: distribute win32 and netware build files too
+
+2006-10-25 17:17  oetiker
+
+	* MakeMakefile: do not remove Makefiles from win32 and netware build
+	  dirs
+
+2006-10-25 17:12  oetiker
+
+	* MakeMakefile, bindings/Makefile.am, bindings/ruby/main.c: fix
+	  build procedure for ruby (clean target) don't run autoreconf at
+	  the end of MakeMakefiles as this has a tendency todo the wrong
+	  things
+
+2006-10-25 16:39  oetiker
+
+	* MakeMakefile: added path to sepp
+
+2006-10-25 16:30  oetiker
+
+	* MakeMakefile: aclocal expects a space after -I ...
+
+2006-10-25 16:24  oetiker
+
+	* MakeMakefile: tell aclocal where to find its config ...
+
+2006-10-25 16:11  oetiker
+
+	* MakeMakefile: aclocal show know where it's stuff is ...
+
+2006-10-22 21:20  oetiker
+
+	* src/parsetime.c: make time paring more robust ... it can now deal
+	  with time date date time time date + xxx date time + xxx
+
+2006-10-22 21:09  oetiker
+
+	* src/rrd_graph.c: check if valid control codes are in use
+
+2006-10-22 16:01  oetiker
+
+	* bindings/ruby/test.rb: fixed ruby demo
+
+2006-10-22 16:01  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm: fixed
+	  address
+
+2006-10-03 07:52  oetiker
+
+	* src/rrdupdate.c: added missing file
+
+2006-09-28 12:38  oetiker
+
+	* doc/rrdruby.pod: fixed doc regarding site install
+
+2006-09-27 21:48  oetiker
+
+	* bindings/Makefile.am, bindings/ruby, bindings/ruby/CHANGES,
+	  bindings/ruby/README, bindings/ruby/extconf.rb,
+	  bindings/ruby/main.c, bindings/ruby/test.rb, configure.ac: added
+	  ruby bindings ... thanks to Loïs LHERBIER lois.lherbier covadis.ch
+
+2006-09-27 21:46  oetiker
+
+	* src/Makefile.am, src/rrd_update.c: make rrdupdate realy light as
+	  it was intended in the first place -- Peter Breitenlohner peb
+	  mppmu.mpg.de
+
+2006-09-27 21:45  oetiker
+
+	* src/parsetime.c: tod can come after the date as well as before the
+	  date
+
+2006-09-18 05:45  oetiker
+
+	* netware/Makefile: fix faild netware makefile merge -- Guenter
+	  Knauf
+
+2006-09-17 21:08  oetiker
+
+	* src/rrd_update.c: make mvs stop complaining about uninitialized
+	  variables ... -- norman wheeler bigpond.com
+
+2006-09-17 21:05  oetiker
+
+	* doc/rrd-beginners.pod: fixed spelling -- Peter Breitenlohner
+
+2006-09-17 20:46  oetiker
+
+	* configure.ac, examples/Makefile.am: fix generation of cgi-demo.cgi
+	  -- Peter Breitenlohner peb mppmu.mpg.de
+
+2006-09-17 20:31  oetiker
+
+	* MakeMakefile, bindings/Makefile.am, bindings/perl-shared/RRDs.xs,
+	  configure.ac, netware/Makefile, src/getopt.c, src/getopt1.c,
+	  src/rrd_afm.c, src/rrd_tool.h, win32/Makefile: make rrdtool use
+	  rrd_config.h instead of config.h since this is just bound to lead
+	  to confusion when the wrong config.h gets sourced -- Guenter Knauf
+	  fix clean target in bindings directory
+
+2006-09-10 19:30  oetiker
+
+	* win32/rrd.dsp, win32/rrd.vcproj, win32/rrdtool.dsp,
+	  win32/rrdtool.dsw, win32/rrdtool.plg: the msvc files need dos file
+	  endings ...
+
+2006-09-10 19:26  oetiker
+
+	* src/rrd_rpncalc.c: we want an int, so lets tell the compiler to
+	  make it not complain
+
+2006-09-10 19:20  oetiker
+
+	* netware/Makefile, win32/Makefile: netware und win32 fixes from
+	  guenter
+
+2006-09-05 19:55  oetiker
+
+	* doc/rrdfetch.pod: we do not need an extra echo there
+
+2006-09-05 18:34  oetiker
+
+	* confignt, netware, netware/Makefile, src/Makefile.NetWare,
+	  src/Makefile.Win32, src/rrd.dsp, src/rrd.vcproj, src/rrd_afm.c,
+	  src/rrd_dump.c, src/rrd_gfx.c, src/rrd_graph.c, src/rrd_tool.h,
+	  src/rrdtool.dsp, src/rrdtool.dsw, src/rrdtool.sln,
+	  src/rrdtool.vcproj, src/win32comp.c, win32, win32/Makefile,
+	  win32/config.h, win32/rrd.dsp, win32/rrd.vcproj,
+	  win32/rrdtool.dsp, win32/rrdtool.dsw, win32/rrdtool.plg,
+	  win32/rrdtool.vcproj: put all the architecture specific stuff in
+	  separate subdirectories ... one for netwara and one for win32 --
+	  Guenter Knauf
+
+2006-09-05 18:19  oetiker
+
+	* src/gifsize.c: noone needs this anymore
+
+2006-09-04 21:10  oetiker
+
+	* src/rrd_graph.c: in logarithmic mode minval must not be <= 0
+
+2006-08-24 04:14  oetiker
+
+	* doc/cdeftutorial.pod: add more submission encuragement -- alex
+
+2006-08-21 11:41  oetiker
+
+	* NT-BUILD-TIPS.txt, WIN32-BUILD-TIPS.txt, src/Makefile.NetWare,
+	  src/Makefile.Win32: updated windows build instructions from
+	  guenter
+
+2006-08-16 06:07  oetiker
+
+	* src/rrd_graph.c: contain a potential problem with log grid
+	  painting Bug #54
+
+2006-08-15 05:51  oetiker
+
+	* src/rrd_first.c: do not loose filedescriptors when rrd_first
+	  errors out
+
+2006-08-15 05:44  oetiker
+
+	* src/rrd_graph_helper.c: catch empty XXXX: commands in graph
+
+2006-08-15 05:24  oetiker
+
+	* Makefile.am, WIN32-BUILD-TIPS.txt: windows is not NT anymore ...
+	  lets call it WIN32
+
+2006-08-13 16:41  oetiker
+
+	* src/get_ver.awk: use unix fileendings here!
+
+2006-08-13 16:40  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: new version added by
+	  Guenter Knauf
+
+2006-08-13 16:25  oetiker
+
+	* src/rrd.h, src/rrd_version.c: added new rrdstrversion function --
+	  Guenter Knauf
+
+2006-08-13 16:22  oetiker
+
+	* src/rrd_graph.c, src/strftime.c, src/strftime.h: use th OS
+	  provided timezone names for %Z this should make things more
+	  flexile will only work on windows, but since we are using
+	  strftime.c on windows only this should not be a problem -- Guenter
+	  Knauf
+
+2006-08-13 16:13  oetiker
+
+	* src/rrd_graph.c: include strftime.h for windows builds -- Guenter
+	  Knauff
+
+2006-08-13 16:10  oetiker
+
+	* src/rrd_tool.h: removed mscv defines to confignt/config.h
+	  completely -- Guenter Knauf
+
+2006-08-13 16:09  oetiker
+
+	* confignt/config.h: working windows config.h
+
+2006-08-13 16:07  oetiker
+
+	* src/rrd_tool.c: can't define new variables in the middle of the
+	  code (unless everyone was using c99 which is not the case)
+
+2006-08-13 15:21  oetiker
+
+	* src/rrd_graph.c: added special labeling for LONGTERM graphs --
+	  Paul Boven p.boven sara.nl
+
+2006-08-10 07:46  oetiker
+
+	* acinclude.m4: it seems some headers have nan predefined ... so
+	  lets just use other variable names
+
+2006-08-04 15:06  oetiker
+
+	* acinclude.m4: copy of the solaris isnan hack from configure.ac
+
+2006-08-03 22:21  oetiker
+
+	* configure.ac: solaris 10 has isnan defined as a sun forte builtin
+	  ... gcc can not deal with this this will replace isnan with an
+	  fpclass expression hopefully working around the problem
+
+2006-08-02 15:05  oetiker
+
+	* bindings/python/rrdtoolmodule.c: fixing python bindings ... Jarod
+	  Wilson jwilson redhat.com
+
+2006-08-01 13:08  oetiker
+
+	* doc/rrdxport.pod, src/rrd_tool.c, src/rrd_xport.c: unknownaszero
+	  was not a good idea ... bye bye
+
+2006-07-31 22:48  oetiker
+
+	* doc/rrdxport.pod, src/rrd_tool.c, src/rrd_xport.c: new options
+	  --enumds and --unknwonaszero for xport
+
+2006-07-14 12:11  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h: prepare for
+	  the release of rrdtool-1.2.15
+
+2006-07-14 12:06  oetiker
+
+	* src/rrd_tool.c: we were leaking directory handles ...
+
+2006-07-14 11:34  oetiker
+
+	* doc/rrdbuild.pod: remove an excess =over
+
+2006-07-14 11:32  oetiker
+
+	* doc/rrdbuild.pod: added missing =over
+
+2006-07-14 11:12  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/gifsize.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.14
+
+2006-07-14 09:47  oetiker
+
+	* src/rrd_graph.c: do not reset im->gdes[i].step blindly. We
+	  initialize it to im->step at allocation time already ... the fix
+	  in r291 was over the top. -- niels weaklogic.com
+
+2006-07-14 08:56  oetiker
+
+	* doc/rrdtool.pod, src/rrd_tool.c: added pwd command for remote
+	  server reset errno to zero before each loop -- Damien.Stuart
+	  usi.net
+
+2006-07-13 08:44  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: fixed makefiles without
+	  libcgi ... guenter knauf
+
+2006-07-07 22:37  oetiker
+
+	* CONTRIBUTORS, bindings/python/rrdtoolmodule.c: added first
+	  function to python bindings ... -- Ulf Lilleengen lulf pvv.ntnu.no
+
+2006-07-05 22:00  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: we have no cgilib
+	  anymore ....
+
+2006-07-04 21:04  oetiker
+
+	* src/rrd_restore.c: let rrdtool understand <?xml ...?> headers in
+	  rrdtool restore input
+
+2006-06-18 21:21  oetiker
+
+	* doc/rrdgraph_rpn.pod, src/rrd_rpncalc.c, src/rrd_rpncalc.h: Added
+	  AVG function to CDEF language. Martin Sperl martin sperl.org
+
+2006-06-15 22:16  oetiker
+
+	* doc/rrdbuild.pod: fixed libpng link
+
+2006-06-15 07:44  oetiker
+
+	* doc/rrdbuild.pod: added hint for RHEL
+
+2006-06-13 21:20  oetiker
+
+	* rrdtool.spec: added missing tcl files
+
+2006-06-07 21:01  oetiker
+
+	* doc/cdeftutorial.pod: fix calc of fahrenheit ...
+
+2006-06-06 13:25  oetiker
+
+	* doc/rrdbuild.pod: additional AIX hints from zoran.majcenic inet.hr
+
+2006-06-06 08:16  oetiker
+
+	* rrdtool.spec: new, working rrdtool.spec file from Jarod Wilson
+	  jwilson redhat.com
+
+2006-05-27 05:44  oetiker
+
+	* bindings/python/rrdtoolmodule.c: python uses the name of the
+	  module for loding, so this should better match up -- Duncan Webb
+	  duncan dwebb ch
+
+2006-05-25 15:13  oetiker
+
+	* doc/rrdbuild.pod: addeed AIX instructions
+
+2006-05-23 06:52  oetiker
+
+	* src/rrd_graph.c: adjust label spacing to make sure labels don't
+	  overlap for the default font.
+
+2006-05-21 22:14  oetiker
+
+	* doc/rrdgraph_data.pod: add note about variable name picking as
+	  suggested by alex
+
+2006-05-21 22:07  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: another Makefile update
+	  from guenter
+
+2006-05-21 22:06  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: tiny updates to netware
+	  and win32 makefiles -- Guenter Knauf
+
+2006-05-21 21:53  oetiker
+
+	* doc/rrd-beginners.pod: fixed type hte->the
+
+2006-05-21 21:47  oetiker
+
+	* src/rrd_graph.c: make vdef time part available in the data_calc
+	  stage so that the legend printer can decide properly
+
+2006-05-21 21:15  oetiker
+
+	* doc/rrdgraph_graph.pod, src/rrd_graph.c, src/rrd_graph.h,
+	  src/rrd_graph_helper.c: new GPRINT option :strftime to print time
+	  associated with a VDEF value
+
+2006-05-21 20:20  oetiker
+
+	* configure.ac: make configure test which flags gcc actually accepts
+	  ...
+
+2006-05-21 13:08  oetiker
+
+	* doc/rrdgraph_graph.pod: don't deprecate HRULE anymore
+
+2006-05-21 12:37  oetiker
+
+	* src/rrd_rpncalc.c: allow DS names starting with the same letters
+	  as operators
+
+2006-05-12 13:26  oetiker
+
+	* src/Makefile.am: we wan't to dist thread_save_nt too
+
+2006-05-11 11:11  oetiker
+
+	* src/rrd_nan_inf.c: make DNAN and DINF faster by caching the result
+	  of the first calculation -- pascal.gloor spale.com
+
+2006-05-11 07:37  oetiker
+
+	* bindings/perl-shared/Makefile.PL: tell Makefile.PL how to store an
+	  rpath under aix
+
+2006-05-10 20:51  oetiker
+
+	* src/rrd_graph.c: improved scaling for --logarithmic mode ... --
+	  beat.zahnd space.unibe.ch
+
+2006-05-09 18:46  oetiker
+
+	* src/rrd_create.c: don't panic if the user forgets to specify the
+	  name of the rrd file
+
+2006-05-07 10:46  oetiker
+
+	* src/rrd_graph.c: make legend spacing more reliable. handle the
+	  fact that some graph comands do not contribute to the legend --
+	  tobi
+
+2006-05-06 13:29  oetiker
+
+	* doc/Makefile.am: lets have index.html -- Peter Breitenlohner <peb
+	  mppmu.mpg.de>
+
+2006-05-06 13:28  oetiker
+
+	* src/rrd.h, src/rrd_dump.c: Avoid gcc warning (discards qualifier)
+	  in tclrrd.c -- Peter Breitenlohner <peb mppmu.mpg.de>
+
+2006-05-06 13:28  oetiker
+
+	* src/rrd_graph.c: Avoid gcc warning ("static not first") -- Peter
+	  Breitenlohner <peb mppmu.mpg.de>
+
+2006-05-06 13:24  oetiker
+
+	* configure.ac: Avoid gcc warnings about use of "long long" -- Peter
+	  Breitenlohner <peb mppmu.mpg.de>
+
+2006-05-06 13:21  oetiker
+
+	* bindings/tcl/Makefile.am: Use tclpkgdir instead of pkglibdir in
+	  order to avoid automake warning -- Peter Breitenlohner <peb
+	  mppmu.mpg.de>
+
+2006-05-06 13:20  oetiker
+
+	* bindings/python/Makefile.am: The rrdtoolmodule.so should be
+	  installed in pyexecdir instead of pythondir (they differ if
+	  prefix!=exec_prefix) -- Peter Breitenlohner <peb mppmu.mpg.de>
+
+2006-05-04 20:41  oetiker
+
+	* src/Makefile.am, src/rrd_error.c, src/rrd_restore.c,
+	  src/rrd_rpncalc.c: fix for debian bug 359071 ... reporting the
+	  long cdef in the error message was too much ... plus some other
+	  small cleanups in this context
+
+2006-05-04 13:26  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/gifsize.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.13
+
+2006-05-04 13:24  oetiker
+
+	* PROJECTS, README, acinclude.m4, configure.ac, doc/rrdbuild.pod,
+	  doc/rrdcgi.pod, doc/rrdcreate.pod, doc/rrddump.pod,
+	  doc/rrdfetch.pod, doc/rrdgraph-old.pod, doc/rrdgraph.pod,
+	  doc/rrdgraph_data.pod, doc/rrdgraph_examples.pod,
+	  doc/rrdgraph_graph.pod, doc/rrdgraph_rpn.pod, doc/rrdinfo.pod,
+	  doc/rrdrestore.pod, doc/rrdtool.pod, doc/rrdtune.pod,
+	  doc/rrdtutorial.pod, doc/rrdupdate.pod, doc/rrdxport.pod: fix my
+	  mail address
+
+2006-05-04 13:12  oetiker
+
+	* src/rrd_create.c, src/rrd_open.c, src/rrd_restore.c: fewer double
+	  frees ... -- slamb slamb.org
+
+2006-05-04 13:02  oetiker
+
+	* src/rrd_restore.c: * fixed argument parsing for long options * no
+	  more doublefree on abort * enable restore of xml dumps created
+	  with rrdtool 1.0.x
+
+2006-05-04 12:11  oetiker
+
+	* src/rrd_fetch.c: if end % step == 0 we should still fetch a full
+	  step ... no need for special handling
+
+2006-05-04 07:48  oetiker
+
+	* src/rrd_update.c: updated handling of subsecond resolution in
+	  connection with unknown data ... bugreport #38 pointed out that
+	  the old handling where the seconds were rounded could lead to
+	  cases where the data stored was higher than the data input ... now
+	  I always floor the unknown seconds and this will lead to the same
+	  or lower data but not higher ... -- tobi
+
+2006-05-02 20:52  oetiker
+
+	* src/rrd_graph.c: variables should be defined at the bein of the
+	  block ... else we loose portability!
+
+2006-04-29 08:57  oetiker
+
+	* doc/rrdbuild.pod: fixed spelling
+
+2006-04-27 06:37  oetiker
+
+	* CONTRIBUTORS, doc/rrdgraph.pod, src/rrd_graph.c, src/rrd_graph.h:
+	  new units=si option -- wim.heirmann elis.urgent.be
+
+2006-04-25 21:00  oetiker
+
+	* src/rrd_gfx.c: compile without multibyte support
+
+2006-04-25 20:59  oetiker
+
+	* src/Makefile.am: lets have proper dependencies
+
+2006-04-24 15:14  oetiker
+
+	* src/rrd_graph.c: make sure things are initialised ...
+
+2006-04-18 05:29  oetiker
+
+	* rrdtool.spec: shared should be share !
+
+2006-04-17 20:25  oetiker
+
+	* src/rrd_graph.c: Add a second label to the Y axis if there is only
+	  going to be one -- Jason A. Smith smithj4 X bnl.gov
+
+2006-04-14 10:17  oetiker
+
+	* acinclude.m4, doc/rrdbuild.pod: no more people links!
+
+2006-04-14 09:22  oetiker
+
+	* bindings/python/setup.py, debian/copyright, rrdtool.spec: remove
+	  people references
+
+2006-04-07 14:37  oetiker
+
+	* doc/rrdbuild.pod: add solaris hint to bild procedure
+
+2006-04-04 18:46  oetiker
+
+	* CONTRIBUTORS, src/rrd_tool.c: allow for input lines of arbitrary
+	  length in rrdtool pipe mode -- roger.meier terreactive.ch
+
+2006-04-01 15:36  oetiker
+
+	* CONTRIBUTORS, doc/rrdgraph.pod, src/rrd_graph.c, src/rrd_graph.h,
+	  src/rrd_tool.c: watermartk feature for rrdgraph by Ronan Mullally
+
+2006-03-26 14:36  oetiker
+
+	* src/rrd_rpncalc.c: vnames can be up to MAX_VNAME_LEN long ... not
+	  only 30 chars ... -- Ulf Harnhammar metaur telia.com
+
+2006-03-26 14:29  oetiker
+
+	* src/rrd_graph.c: potential bufferoverflow throught large windir
+	  avoided
+
+2006-03-14 14:59  oetiker
+
+	* NEWS: added note on the fact that no OK will be printed in rrdtool
+	  pipe mode if an error occures.
+
+2006-03-14 07:11  oetiker
+
+	* doc/rrdtool.pod: RRDtool in remote mode will either print an ERROR
+	  line or an OK line not both.
+
+2006-03-13 23:21  oetiker
+
+	* src/rrd_tool.c: in pipe mode, make rrd_tool send errors to STDOUT
+	  (most of the time) -- tobi
+
+2006-03-06 07:15  oetiker
+
+	* src/rrd_graph.c: at least freebsd will not do utf8 bits properly
+	  without this
+
+2006-03-03 23:11  oetiker
+
+	* doc/rrdgraph_graph.pod, src/rrd_graph.c, src/rrd_graph_helper.c: *
+	  simplify code for STACK function ... there were two code paths
+	  (new as well as legacy from 1.0.x) * make TICK work for negative
+	  fractions
+
+2006-03-03 23:10  oetiker
+
+	* configure.ac: remove ~ from my wishlist address ...
+
+2006-03-03 23:10  oetiker
+
+	* src/rrd_gfx.c: make this compile even when HAVE_MBSTOWCS is not
+	  set
+
+2006-02-23 07:26  oetiker
+
+	* src/rrd_fetch.c: separate matching of full and partial match
+	  evaluation for better result stability. The fetch result was
+	  dependent on the RRA ordering before. -- Jo Rhett jrhett
+	  svcolo.com
+
+2006-02-20 06:20  oetiker
+
+	* doc/rrdgraph_examples.pod, doc/rrdgraph_graph.pod: YYYYMMDDhhmm is
+	  not supported ... only YYYYMMDD
+
+2006-02-08 11:35  oetiker
+
+	* doc/rrdcgi.pod, src/rrd_cgi.c: OS and COPYRIGHT removed from the
+	  rrdcgi INTERNAL function since we do not have this info
+
+2006-02-06 19:49  oetiker
+
+	* doc/rrdcgi.pod, src/rrd_cgi.c: new rrdcgi function RRD::INTERNAL
+	  for accessing VERSION, COPYRIGHT, COMPILETIME, OS -- Guenter Knauf
+	  gk gknw.de
+
+2006-02-06 19:46  oetiker
+
+	* COPYRIGHT, rrdtool-1.2-release, src/rrd_tool.c: we have 2006 now
+	  so let's show it
+
+2006-01-29 23:28  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32: more makefile cleanup
+	  from Guenter Knauf gk gknw.de
+
+2006-01-25 19:09  oetiker
+
+	* bindings/perl-piped/RRDp.pm: allow RRDp to catch errors
+
+2006-01-22 12:02  oetiker
+
+	* doc/rrdcreate.pod: clarified the documentation of xff -- Michael
+	  Bunk mb computer-leipzig.com
+
+2006-01-22 11:00  oetiker
+
+	* doc/rrdgraph_rpn.pod: the operator in the example is * not + --
+	  Nick Sharp njsharp bigpond.net.au
+
+2006-01-15 13:31  oetiker
+
+	* bindings/perl-shared/RRDs.xs: make sure we pickup the correct
+	  config.h ... -- Blair Zajac blair orcaware.com
+
+2006-01-15 12:31  oetiker
+
+	* src/rrd_tool.c: make sure the image size only gets printed from
+	  rrd_tool when --imageinfo is NOT set.
+
+2006-01-15 12:25  oetiker
+
+	* src/rrd_graph.c: make sure gcc does not thing gridind may be
+	  undefined
+
+2006-01-15 11:12  oetiker
+
+	* doc/rrdcreate.pod: HWPREDICT without reference number will
+	  implicitly create the other Holt-Winters RRAs.
+
+2006-01-15 09:03  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32, src/rrd_tool.h: updated
+	  NetWare and Cygwin Builds
+
+2006-01-15 08:55  oetiker
+
+	* src/rrd_graph.c: make sure gridind is defined under all conditions
+
+2006-01-14 09:10  oetiker
+
+	* CONTRIBUTORS, bindings/perl-shared/RRDs.pm, bindings/tcl/tclrrd.c,
+	  doc/rrddump.pod, src/rrd.h, src/rrd_dump.c: add perlbindings and
+	  optional export filename to rrd_dump -- Nicola Worthington nicolaw
+	  arwen.tfb.net
+
+2006-01-05 20:39  oetiker
+
+	* bindings/Makefile.am, bindings/perl-shared/Makefile.PL: let the
+	  building of the perl extension be more reliable ...
+
+2006-01-05 20:07  oetiker
+
+	* src/rrd_gfx.c: remove redundant if statement in rrd_gfx pdf code
+	  ... -- NormW
+
+2006-01-04 22:07  oetiker
+
+	* src/Makefile.NetWare, src/Makefile.Win32, src/get_ver.awk,
+	  src/rrd_tool.h: Compile time improvments for NetWare and Win32 --
+	  Guenter Knauf gk.gknw.de
+
+2006-01-04 20:12  oetiker
+
+	* src/rrd_gfx.c: make sure this actually compiles with HAVE_MBSTOWCS
+	  is not defined
+
+2005-12-30 14:36  oetiker
+
+	* src/rrd_tool.c: only use getuid if it is actually available ...
+
+2005-12-26 16:01  oetiker
+
+	* doc/rrdcreate.pod: added heartbeat grahics
+
+2005-12-19 12:28  oetiker
+
+	* bindings/tcl/Makefile.am, bindings/tcl/tclrrd.c, configure.ac: fix
+	  tcl issues ... build with pre tcl8.4 ... do not try to install
+	  into the tcl tree unless --enable-tcl-site is given -- tobi
+
+2005-12-18 20:30  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h: prepare for
+	  the release of rrdtool-1.2.12
+
+2005-12-18 20:29  oetiker
+
+	* COPYRIGHT: added FLOSS exception from
+	  http://www.mysql.com/company/legal/licensing/foss-exception.html
+	  in order to not end up in license incompatibility hell -- tobi
+
+2005-11-30 09:19  oetiker
+
+	* src/rrd_graph_helper.c: if called with --lazy we still want to
+	  PRINT ... -- Bartek Szady bszx from bszx.eu.org
+
+2005-11-28 21:59  oetiker
+
+	* src/rrd_update.c: we should still consider the mrhb ...
+
+2005-11-20 10:16  oetiker
+
+	* src/Makefile.Win32: improve win32 compilation -- Norm
+
+2005-11-18 20:38  oetiker
+
+	* src/get_ver.awk: deal with versions ending in letters
+
+2005-11-16 13:14  oetiker
+
+	* configure.ac: have indivitudal lines for generating output files,
+	  so that cygwin does not choke
+
+2005-11-14 23:07  oetiker
+
+	* configure.ac: make mmap test a little saver
+
+2005-11-14 11:46  oetiker
+
+	* configure.ac: cygwin can actually do mmap ... -- larryjadams with
+	  comcast.net
+
+2005-11-14 07:32  oetiker
+
+	* src/rrd_update.c: guess the option should still be called template
+	  :-)
+
+2005-11-13 18:32  oetiker
+
+	* acinclude.m4, configure.ac: improve screen apperance of configure
+	  output as suggested by Dale -- tobi
+
+2005-11-13 18:31  oetiker
+
+	* bindings/python/Makefile.am: don't use clean: target ... automake
+	  wants this to be clean-local:
+
+2005-11-12 23:36  oetiker
+
+	* src/rrd_gfx.c: add xmlns declaration to svg output -- R.P. Aditya
+	  <aditya with grot.org>
+
+2005-11-12 23:30  oetiker
+
+	* bindings/Makefile.am: clean target was broken
+
+2005-11-12 23:10  oetiker
+
+	* configure.ac, doc/rrdbuild.pod, src/Makefile.am, src/rrd_cgi.c: *
+	  integrate necessary cgi functionality into rrd_cgi.c so that
+	  libcgi is not required anymore ... -- D. Walsh <buildsmart at
+	  daleenterprise.com> * check if we have to include malloc/malloc.h
+	  to make malloc work ... -- tobi
+
+2005-11-07 19:12  oetiker
+
+	* src/rrd_update.c: the variable template has to generic a name, it
+	  clashes with other things in some environments.
+
+2005-10-28 05:55  oetiker
+
+	* doc/rrdbuild.pod: added openbsd note
+
+2005-10-24 20:55  oetiker
+
+	* bindings/tcl/Makefile.am, bindings/tcl/tclrrd.c: use multithreded
+	  version of librrd -- Oleg Derevenetz <oleg with vsi.ru>
+
+2005-10-11 17:09  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph.h, src/rrd_graph_helper.c,
+	  src/rrd_rpncalc.c, src/rrd_rpncalc.h: improved error messages for
+	  rrd_graph commandline parsing -- Alex
+
+2005-10-11 16:51  oetiker
+
+	* examples/minmax.pl.in: fix file generation
+
+2005-10-11 16:41  oetiker
+
+	* examples/4charts.pl.in, examples/bigtops.pl.in,
+	  examples/minmax.pl.in, examples/shared-demo.pl.in,
+	  examples/stripes.pl.in: die on error! -- Alex
+
+2005-10-11 16:37  oetiker
+
+	* examples/4charts.pl.in, examples/bigtops.pl.in,
+	  examples/minmax.pl.in: the images should be written to the current
+	  directory ... -- Alex
+
+2005-10-11 16:32  oetiker
+
+	* configure.ac: do not complain about strict aliasing issues -- Alex
+
+2005-10-08 21:58  oetiker
+
+	* bindings/tcl/tclrrd.c: allow rrd::graph to write directly to a tcl
+	  stream ... by Dave Bodenstab <dave with bodenstab.org>
+
+2005-10-07 07:48  oetiker
+
+	* CONTRIBUTORS, bindings/tcl/Makefile.am, bindings/tcl/tclrrd.c,
+	  configure.ac: updates for tcl bindings by -- Dave Bodenstab <dave
+	  on bodenstab.org>
+
+2005-10-07 07:48  oetiker
+
+	* Makefile.am, favicon.ico: included favicon in distro
+
+2005-09-26 20:33  oetiker
+
+	* src/rrd_gfx.c: plugged two memmory leaks happening when a
+	  requested font is not found.
+
+2005-09-23 23:06  oetiker
+
+	* src/rrd_graph.c: hmpf its the gdef step we are talking about not
+	  the image step !
+
+2005-09-22 20:18  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph.h, src/rrd_graph_helper.c: do not
+	  'reload' data if you already have it!
+
+2005-09-22 20:17  oetiker
+
+	* src/rrd_restore.c: the -r option should not expect an argument
+
+2005-09-19 07:42  oetiker
+
+	* src/rrd_restore.c: do not free stuff that gets freed later anyway
+
+2005-09-18 18:28  oetiker
+
+	* src/Makefile.NetWare: Netware Build Updates --- Guenter Knauf <gk
+	  with gknw.de>
+
+2005-09-18 16:59  oetiker
+
+	* src/rrd_fetch.c: allocate memory for one more row ... fetch can
+	  not return 0 reows ...
+
+2005-09-18 15:39  oetiker
+
+	* src/rrd_graph.c: comparing floating point numbers is dangerouse
+	  ... don't do this directly!
+
+2005-09-01 21:23  oetiker
+
+	* src/rrd_tool.c: since we use firstdir even without CHROOT it
+	  should better be defined in any case -- Guenter Knauf
+
+2005-08-30 05:52  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph.h: When selecting the x-axis label
+	  take the length of the time shown in the graph into consideration
+	  just showing %H:%M in a two day presentation is a problem ... --
+	  LAUKENS Niels <Niels.LAUKENS .. VRT.BE>
+
+2005-08-28 07:33  oetiker
+
+	* doc/rrdbuild.pod: fixed location of example scripts
+
+2005-08-27 21:29  oetiker
+
+	* src/rrd_update.c: resolve subsecond resolution logging and
+	  handling of unknown values by starting off with an unknown value
+	  when building a pdp instead of starting out with 0 and then
+	  turning it into unknown later on if the number of uknown seconds
+	  is equal or larger than the interval ...
+
+2005-08-27 20:55  oetiker
+
+	* examples/piped-demo.pl.in: the rrdtool binary one more level up
+	  the path ...
+
+2005-08-27 20:52  oetiker
+
+	* examples/piped-demo.pl.in: update for new prefix setting
+
+2005-08-25 20:43  oetiker
+
+	* src/rrd_resize.c: when resize converts a v1 rrd to v3 it should
+	  also change the version number in the head ...
+
+2005-08-23 21:18  oetiker
+
+	* Makefile.am, src/Makefile.NetWare, src/Makefile.Win32,
+	  src/Makefile.am, src/get_ver.awk, src/rrd_afm.c, src/rrd_dump.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_update.c, src/rrdtool.dsp,
+	  src/rrdtool.vcproj: fixes for compiling rrdtool with win32 mingw
+	  and netware -- Guenter Knauf <gk with gknw.de>
+
+2005-08-16 05:30  oetiker
+
+	* doc/rrdgraph_data.pod, doc/rrdgraph_examples.pod,
+	  doc/rrdgraph_rpn.pod: added notes about VDEF expressions not being
+	  general purpose
+
+2005-08-11 19:18  oetiker
+
+	* src/rrd_tool.c: only bomb is there is no chroot and someone tries
+	  to use it.
+
+2005-08-04 05:08  oetiker
+
+	* doc/rrdgraph_rpn.pod, src/rrd_graph.c, src/rrd_graph.h: New VDEF
+	  functions for least squares slope, intercept & correlation for
+	  simple forecasting -- Trent Burkard <tburkard with tangentis.com>
+
+2005-08-04 04:59  oetiker
+
+	* src/rrd_update.c: fix rounding issues that prevented UNKNOWN to
+	  work as soon as subsecond resolution was used
+
+2005-08-04 04:58  oetiker
+
+	* src/rrd_graph.c: avoid drawing lines where two points are in the
+	  same spot. this mai be confusing libart
+
+2005-08-02 15:54  oetiker
+
+	* bindings/Makefile.am: make sure clean works even when the perl
+	  Makefile is broken
+
+2005-07-26 09:13  oetiker
+
+	* src/rrd_graph.c: initialize font to empty string for deault font
+	  case.
+
+2005-07-25 14:12  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.11
+
+2005-07-25 14:07  oetiker
+
+	* configure.ac, src/Makefile.am: prepared for release
+
+2005-07-22 13:16  oetiker
+
+	* src/rrd_tool.c: do not quit so easily when runing in interactive
+	  mode
+
+2005-07-22 13:16  oetiker
+
+	* src/rrd_graph.c: init ytr after all the changes have happened
+
+2005-07-22 13:10  oetiker
+
+	* src/rrd_graph.c: make --no-gridfit with --only-graph work
+
+2005-07-21 22:23  oetiker
+
+	* src/rrd_graph.c: when stacking known on unknown, then we asume
+	  unknown was zero ...
+
+2005-07-20 07:20  oetiker
+
+	* configure.ac: make sure gcc-4.0 does not optimize our tests away
+	  :-)
+
+2005-07-19 10:00  oetiker
+
+	* src/rrd_graph.c: fixed some corner cases in drawing code to get
+	  the same results as before with way more performance
+
+2005-07-11 22:49  oetiker
+
+	* src/rrd_graph.c: optimized drawing routines ... up to 6 times
+	  faster (in the case of smokeping)
+
+2005-07-07 10:27  oetiker
+
+	* doc/rrdgraph.pod: colors start with # not :
+
+2005-07-04 18:49  oetiker
+
+	* src/rrd_graph.c: make setting just the size and not the font work
+	  -- Havard Eidnes <he from uninett.no>
+
+2005-06-28 21:03  oetiker
+
+	* bindings/Makefile.am, bindings/python/Makefile.am,
+	  bindings/tcl/Makefile.am, configure.ac, doc/Makefile.am,
+	  examples/Makefile.am: * the makefiles should not depend on gnumake
+	  features * make the perl module compilation environement
+	  configurable -- Stan Sinyagin ssinyagin on yahoo.com
+
+2005-06-25 05:24  oetiker
+
+	* doc/rrdbuild.pod: added GNUMAKE and EGREP hints
+
+2005-06-20 09:15  oetiker
+
+	* src/rrd_graph.c: x-axis labels should be aligned to their baseline
+	  alt-y-grid labels without fractionals should have no fractionals
+	  when printed
+
+2005-06-17 09:05  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_version.c, src/rrd_xport.c, src/rrd_xport.h: prepare for
+	  the release of rrdtool-1.2.10
+
+2005-06-16 22:09  oetiker
+
+	* src/rrd_graph.c: when building the sgridstep in alt-y-grid mode,
+	  take the --base into consideration.
+
+2005-06-13 21:56  oetiker
+
+	* src/rrd_graph.c: simplify code for generating y axis labels a bit.
+
+2005-06-13 13:20  oetiker
+
+	* src/rrd_gfx.c: wide chars should better be unsigned
+
+2005-06-13 12:56  oetiker
+
+	* src/rrd_gfx.c: fall back to assuming latin1 encoding if mbtowchar
+	  conversion fails
+
+2005-06-13 05:43  oetiker
+
+	* doc/rrdgraph_data.pod, src/rrd_graph_helper.c: allow for VNAMES
+	  starting with a number and add documentation -- Alex
+
+2005-06-13 05:43  oetiker
+
+	* doc/rrdgraph.pod: add notes about small numbers for --alt-y-grid
+
+2005-06-12 20:01  oetiker
+
+	* src/rrd_update.c: kill the last stored counter value if the
+	  updates comes after mrhb to make sure it does not get taken into
+	  account accedenly later on.
+
+2005-06-12 20:00  oetiker
+
+	* src/rrd_graph.c: make --alt-y-grid work properly in many more
+	  cases than before
+
+2005-06-11 19:03  oetiker
+
+	* src/rrd_open.c: be more careful when checking if a file is an
+	  rrdfile
+
+2005-06-11 06:17  oetiker
+
+	* doc/Makefile.am: distribute all generated documentation install in
+	  share and not shared drop index.html link
+
+2005-06-11 06:14  oetiker
+
+	* examples/Makefile.am: install examples in an rrdtool specific
+	  subdirectory if the prefix does not contain rrd -- Peter
+	  Breitenlohner
+
+2005-06-11 05:41  oetiker
+
+	* bindings/Makefile.am, bindings/perl-piped/t/base.t: avoid problems
+	  when building with VPATH set and --disable-perl fix make test for
+	  perl-piped -- Peter Breitenlohner
+
+2005-06-11 05:40  oetiker
+
+	* bindings/python/Makefile.am, doc/Makefile.am: let 'out-of tree'
+	  builds work for everythin but the perl module -- Peter
+	  Breitenlohner
+
+2005-06-11 05:37  oetiker
+
+	* src/rrd_gfx.c: defined DPRINTF in a more compatible way -- Peter
+	  Breitenlohner
+
+2005-06-11 05:31  oetiker
+
+	* acinclude.m4, configure.ac, src/Makefile.am: link libcgi only
+	  against rrd_cgi since it is only needed there -- Peter
+	  Breitenlohner
+
+2005-06-11 05:29  oetiker
+
+	* acinclude.m4, configure.ac: Make sure librrd_th properly depends
+	  on libpthread. -- Peter Breitenlohner
+
+2005-06-11 05:27  oetiker
+
+	* src/rrd_create.c: avoid gcc (3.4.3) warnings char format,
+	  different type arg -- Peter Breitenlohner
+
+2005-06-11 05:26  oetiker
+
+	* bindings/tcl/Makefile.am, bindings/tcl/ifOctets.tcl,
+	  bindings/tcl/ifOctets.tcl.in, bindings/tcl/tclrrd.c, configure.ac:
+	  fix various problems with the tcl bindings -- Peter Breitenlohner
+
+2005-06-11 05:22  oetiker
+
+	* CONTRIBUTORS: added peter breitenlohner
+
+2005-06-11 05:20  oetiker
+
+	* src/rrd_cgi.c: remove various gcc (3.4.3) warnings such as
+	  discards qualifier all due to 'char **' vs. 'const char **'
+	  discrepancies. -- Peter Breitenlohner peb with mppmu.mpg.de
+
+2005-06-11 05:15  oetiker
+
+	* src/rrd_first.c: re-innitializing sort of defeats the purpose
+
+2005-06-11 05:03  oetiker
+
+	* src/rrd_open.c: be more carefull in checking for sucessful open
+
+2005-06-10 19:25  oetiker
+
+	* doc/rrdgraph_data.pod: vnames MUST start with a letter
+
+2005-06-10 19:24  oetiker
+
+	* src/rrd_gfx.c: kill another warning
+
+2005-06-10 18:44  oetiker
+
+	* doc/rrdgraph.pod, src/rrd_graph.c: make --font more flexible: *
+	  TITLE:30: just alter the size of the title *
+	  DEFAULT:0:/tmp/funfont.ttf alter the font but not the size
+
+2005-06-10 08:42  oetiker
+
+	* doc/rrdbuild.pod: added missing cd and replace one path with a
+	  variable
+
+2005-06-07 22:10  oetiker
+
+	* src/rrd_afm.c, src/rrd_afm.h, src/rrd_gfx.c: make pdf/eps/svg
+	  formats utf8 aware too -- Peter Speck
+
+2005-06-06 05:32  oetiker
+
+	* rrdtool.spec: sync up with Dag Wieers version from
+	  http://dag.wieers.com/packages/rrdtool/rrdtool.spec
+
+2005-06-05 22:23  oetiker
+
+	* doc/rrdgraph_rpn.pod, src/rrd_rpncalc.c, src/rrd_rpncalc.h: New
+	  functions for CDEF ATAN2 RAD2DEG and DEG2RAD -- Simon Melhuish
+	  <simon mailing from melhuish.info>
+
+2005-05-31 06:22  oetiker
+
+	* doc/rrd-beginners.pod: fixed epoch
+
+2005-05-28 13:01  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool-1.2-release, rrdtool.spec,
+	  src/Makefile.am, src/gdpng.c, src/gifsize.c, src/pngsize.c,
+	  src/rrd.h, src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_version.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.9
+
+2005-05-28 12:53  oetiker
+
+	* doc/rrdbuild.pod: add notes on building on Mac OS X
+
+2005-05-28 12:52  oetiker
+
+	* src/rrd_gfx.c, src/rrd_update.c: kill a few warnings
+
+2005-05-28 12:52  oetiker
+
+	* bindings/perl-shared/Makefile.PL: make the bindings work on os x
+
+2005-05-27 19:17  oetiker
+
+	* doc/rrdgraph_data.pod: add note on variable names
+
+2005-05-27 19:12  oetiker
+
+	* src/rrd_graph_helper.c: remove one more warning
+
+2005-05-27 19:12  oetiker
+
+	* src/rrd_graph.h: there is realy no reason to have the vnames
+	  constraind so much
+
+2005-05-27 19:01  oetiker
+
+	* src/rrd_gfx.c: only print ttf font errors when compiled with
+	  -DDEBUG
+
+2005-05-22 22:29  oetiker
+
+	* src/rrd_gfx.c: don't go into an endless loop upon finding a bad
+	  character in a truetype font
+
+2005-05-20 06:20  oetiker
+
+	* doc/rrdbuild.pod: go into rrdbuild too if we use tcsh
+
+2005-05-20 05:48  oetiker
+
+	* rrdtool-1.2-release: initial checking
+
+2005-05-20 05:46  oetiker
+
+	* doc/bin_dec_hex.pod, doc/cdeftutorial.pod, doc/rpntutorial.pod,
+	  doc/rrd-beginners.pod, doc/rrdbuild.pod, doc/rrdcgi.pod,
+	  doc/rrdcreate.pod, doc/rrddump.pod, doc/rrdfetch.pod,
+	  doc/rrdfirst.pod, doc/rrdgraph-old.pod, doc/rrdgraph.pod,
+	  doc/rrdgraph_data.pod, doc/rrdgraph_graph.pod,
+	  doc/rrdgraph_rpn.pod, doc/rrdpython.pod, doc/rrdresize.pod,
+	  doc/rrdthreads.pod, doc/rrdtool.pod, doc/rrdtune.pod,
+	  doc/rrdtutorial.es.pod, doc/rrdtutorial.pod, doc/rrdupdate.pod,
+	  doc/rrdxport.pod: remove extra whitespace at the end of lines
+
+2005-05-20 05:43  oetiker
+
+	* doc/rrdbuild.pod: introduce builddir
+
+2005-05-20 05:14  oetiker
+
+	* configure.ac: iconf is not needed so to not check for it
+
+2005-05-19 23:21  oetiker
+
+	* src/Makefile.am, src/rrd_tool.c: added propper numeric version
+	  number to version
+
+2005-05-19 23:21  oetiker
+
+	* configure.ac, src/rrd_gfx.c: add multibyte to wide char conversion
+	  ability. Now every string users input should should be handled
+	  propperly by rrdtool, whatever your locale says will work.
+
+2005-05-19 23:19  oetiker
+
+	* src/rrd_create.c: windows at least stores null terminated char
+	  strings in dummychar1 -- Philippe
+
+2005-05-18 20:20  oetiker
+
+	* bindings/tcl/Makefile.am, bindings/tcl/tclrrd.c: make tcl compile
+	  again ... don't know if it will work though
+
+2005-05-18 19:43  oetiker
+
+	* src/rrd.h: fix rrd_version prototype
+
+2005-05-18 19:41  oetiker
+
+	* configure.ac, src/Makefile.am, src/rrd.h, src/rrd_gfx.c,
+	  src/rrd_is_thread_safe.h, src/rrd_tool.c, src/rrd_update.c,
+	  src/rrd_version.c: cleaned up version number code and added new
+	  function rrd_version -- partly by Burton Strauss
+
+2005-05-18 19:18  oetiker
+
+	* bindings/perl-shared/Makefile.PL: help building perl on hpux
+
+2005-05-16 20:56  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.8
+
+2005-05-16 20:55  oetiker
+
+	* bindings/Makefile.am, bindings/python/Makefile.am,
+	  bindings/tcl/Makefile.am, configure.ac: redo --disable-* options
+	  for python and tcl add some more quotes to protect potentially
+	  empty variables in tests which should make configure more robust.
+
+2005-05-16 20:04  oetiker
+
+	* bindings/Makefile.am, configure.ac: if python stuff does not work,
+	  do not die, just do not compile python
+
+2005-05-16 20:02  oetiker
+
+	* configure.ac: fix extra argument when testing for PERLCC problem
+	  -- Simon Leinen
+
+2005-05-16 12:18  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.7
+
+2005-05-16 12:14  oetiker
+
+	* NEWS: added note about --alt-y-mrtg
+
+2005-05-16 10:12  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph_helper.c: fix the color square
+	  spacing so that it works regardles of the fontsize and with
+	  transparend backgrounds.
+
+2005-05-16 09:01  oetiker
+
+	* src/rrd_graph.c: added alt-y-mrtg option as a dummy so that old
+	  apps who use it do not crash when doing so.
+
+2005-05-16 06:33  oetiker
+
+	* doc/rrdgraph.pod, src/rrd_graph.c, src/rrd_graph.h: reintroduced
+	  the FRAME color ... somehow it was lost from 1.0.x
+
+2005-05-15 14:16  oetiker
+
+	* src/rrd_graph.c: make transparent backgrounds work propperly
+
+2005-05-14 21:57  oetiker
+
+	* src/getopt.c, src/rrd_afm.c, src/rrd_cgi.c, src/rrd_graph.c,
+	  src/rrd_nan_inf.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_update.c, src/rrd_xport.c:
+	  it seems that _WIN32 is more commonly defined thatn WIN32 on win32
+	  ... (gifford.hesketh on gmail.com)
+
+2005-05-14 17:32  oetiker
+
+	* src/rrd_restore.c: added a note to dump old rrd files with a
+	  current rrdtool dump to get the upgraded on the fly. Adding 001
+	  support should not be all that tough though. Any takers ?
+
+2005-05-14 15:07  oetiker
+
+	* src/rrd_open.c: check cookie read for success
+
+2005-05-14 09:35  oetiker
+
+	* src/rrd_graph.c: if the y value is out of bounds, make it just a
+	  wee bit larger or smaller than the bound so that the code can
+	  detect this by comparing it with the bound, but make it so small
+	  that it is not visible.
+
+2005-05-12 22:27  oetiker
+
+	* acinclude.m4: one sed is quite enough
+
+2005-05-12 22:22  oetiker
+
+	* acinclude.m4: [ must be quoted by [ ...
+
+2005-05-12 22:12  oetiker
+
+	* acinclude.m4: add global option
+
+2005-05-12 22:06  oetiker
+
+	* acinclude.m4: fox sed line for unsetting header cache
+
+2005-05-12 22:03  oetiker
+
+	* acinclude.m4, configure.ac: make sure the header gets tested twice
+
+2005-05-12 22:03  oetiker
+
+	* doc/rrdpython.pod: add notes on python error, and install location
+
+2005-05-12 11:32  oetiker
+
+	* src/rrd_graph.c: allow 3/4 component color rrdtool graph --color
+	  too -- Alex
+
+2005-05-12 11:28  oetiker
+
+	* src/rrd_graph.c: make the areas a little bigger still for propper
+	  overlapping
+
+2005-05-12 11:22  oetiker
+
+	* src/rrd_create.c: make parsing of DS arguments more robust and
+	  give more sensible error messages. -- Alex
+
+2005-05-12 08:38  oetiker
+
+	* src/rrd_graph.c: make the areas that makeup the graphs a little
+	  larger, so that they overlap a bit and do not exhibit white lines
+	  when touching each other.
+
+2005-05-12 05:48  oetiker
+
+	* bindings/python/Makefile.am, bindings/python/Makefile.in,
+	  bindings/python/rrdtoolmodule.c: some more warning fixes
+
+2005-05-12 05:41  oetiker
+
+	* bindings/python/rrd_format.h, bindings/python/rrdtoolmodule.c: add
+	  unused to prevent warnings about self
+
+2005-05-11 18:31  oetiker
+
+	* doc/rrdpython.pod: intial python bindings documentation
+
+2005-05-11 12:09  oetiker
+
+	* doc/rrdcreate.pod: fix wording for min/max ... they are not
+	  optional
+
+2005-05-10 20:19  oetiker
+
+	* bindings/python/rrdtoolmodule.c: second installment with warning
+	  fixes from alan
+
+2005-05-10 18:52  oetiker
+
+	* CONTRIBUTORS, Makefile.am, acinclude.m4, bindings/Makefile.am,
+	  bindings/python, bindings/python/ACKNOWLEDGEMENT,
+	  bindings/python/AUTHORS, bindings/python/COPYING,
+	  bindings/python/Makefile.am, bindings/python/Makefile.in,
+	  bindings/python/README, bindings/python/Setup.in,
+	  bindings/python/rrd_extra.h, bindings/python/rrd_format.h,
+	  bindings/python/rrdtoolmodule.c, bindings/python/setup.py,
+	  configure.ac, rrdtool.spec: python bindings add -- Alan Milligan
+	  alan from balclutha.org
+
+2005-05-10 18:35  oetiker
+
+	* src/rrd_gfx.c: fix for character escaping in EPS -- Peter Speck
+
+2005-05-10 06:07  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.h, src/rrd_graph.c, src/rrd_graph_helper.c,
+	  src/rrd_hw.c, src/rrd_hw.h, src/rrd_info.c,
+	  src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.6
+
+2005-05-10 06:06  oetiker
+
+	* src/rrd_gfx.c: I guess the pdf entities want to be escaped chars
+	  not just control caracters with a prepended backslash ...
+
+2005-05-10 05:18  oetiker
+
+	* src/rrd_afm.c: we should not use C++ comments in c files
+
+2005-05-10 04:14  oetiker
+
+	* src/Makefile.am: we should distribute unused.h if we use it :-)
+
+2005-05-09 20:15  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/gifsize.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h: prepare for the release of rrdtool-1.2.5
+
+2005-05-09 20:13  oetiker
+
+	* src/art_rgba_svp.c, src/rrd_afm.c, src/rrd_gfx.c,
+	  src/rrd_update.c, src/rrd_xport.c, src/unused.h: silence warnings
+	  for UNUSED variables without changeing the funtion interfaces --
+	  Alex
+
+2005-05-09 19:32  oetiker
+
+	* src/rrd_graph.c: allow decimal positions y axis labels as soon as
+	  the max entry is < 10
+
+2005-05-09 19:11  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph_helper.c: fix rendering of the
+	  color spots especially when proportional fonts are in use.
+
+2005-05-09 14:01  oetiker
+
+	* src/rrd_afm.c, src/rrd_afm.h, src/rrd_gfx.c: EPS/SVG/PDF code ...
+	  more comments and better font finder including removal of
+	  hardcoded SVG font. -- Peter Speck speck from vitality.dk
+
+2005-05-09 13:22  oetiker
+
+	* src/rrd_afm.c, src/rrd_gfx.c: * switch to courier if the font is
+	  unknown * fix font positioning
+
+2005-05-09 05:39  oetiker
+
+	* bindings/perl-shared/Makefile.PL: perls $^O is set to linux not
+	  Linux
+
+2005-05-08 22:02  oetiker
+
+	* src/rrd_gfx.c: svg/pdf/eps rendering improvements. There are still
+	  issues though ... -- peter speck
+
+2005-05-08 21:25  oetiker
+
+	* libraries/afm/compile_afm.pl, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h: added support for getting
+	  ascent/descent size info for ps fonts -- Peter Speck
+
+2005-05-08 20:15  oetiker
+
+	* src/art_rgb_affine_private.h, src/art_rgba_rgba_affine.c,
+	  src/art_rgba_rgba_affine.h: we do not actually need these files
+	  ... goodbye
+
+2005-05-08 16:59  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/Makefile.am,
+	  src/gdpng.c, src/gifsize.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h: prepare for the release of rrdtool-1.2.4
+
+2005-05-08 16:22  oetiker
+
+	* src/rrd_graph.c: * adjust spacing at the left border of the graph.
+	  use less white space * increasse minimal grid spacing and label
+	  spacing
+
+2005-05-08 16:02  oetiker
+
+	* src/rrd_graph.c: increase minimal vertical spacing for y-axis
+	  lables
+
+2005-05-08 16:01  oetiker
+
+	* src/rrd_graph.c: shorten space for y-axis labels a bit
+
+2005-05-08 15:40  oetiker
+
+	* src/rrd_tool.c: remove the premature fox for the unused parameter
+	  in xport
+
+2005-05-08 15:30  oetiker
+
+	* README: sync with reality
+
+2005-05-08 15:19  oetiker
+
+	* src/rrd_tool.c: be more portable with shorter strings
+
+2005-05-08 15:18  oetiker
+
+	* src/Makefile.am: we do not use the affine functions
+
+2005-05-08 15:07  oetiker
+
+	* configure.ac, src/rrd_graph_helper.c: removed extra $ from from
+	  PERLCC test
+
+2005-05-08 08:20  oetiker
+
+	* doc/rrdbuild.pod: fix rendering errors by removing single spaces
+
+2005-05-07 23:54  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prepare for the release of
+	  rrdtool-1.2.3
+
+2005-05-07 23:26  oetiker
+
+	* src/art_rgba_rgba_affine.c, src/art_rgba_rgba_affine.h: fix some
+	  more y0, y1 complaints
+
+2005-05-07 23:26  oetiker
+
+	* src/rrd_graph_helper.c: When encountering an empty legend, do NOT
+	  make space for drawing the color spats in front of it.
+
+2005-05-07 15:57  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdbuild.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h: prep for 1.2.2 release
+
+2005-05-07 15:51  oetiker
+
+	* src/Makefile.am: increment library revision
+
+2005-05-07 15:45  oetiker
+
+	* src/art_rgba_svp.c, src/rrd_gfx.c, src/rrd_gfx.h: fix these
+	  annoying y0 warnings.
+
+2005-05-07 15:45  oetiker
+
+	* src/rrd_graph.c: add rrdtool attribution string back using a
+	  transparent version of the font color
+
+2005-05-07 15:23  oetiker
+
+	* doc/Makefile.am, doc/rrdbuild.pod, doc/rrdgraph_graph.pod: added
+	  build instructions
+
+2005-05-07 10:38  oetiker
+
+	* src/rrd_gfx.c: fix for rotation code in pdf,eps,svg formats --
+	  Peter Speck <speck from vitality.dk>
+
+2005-05-07 10:34  oetiker
+
+	* src/rrd_graph.c, src/rrd_rpncalc.c: fix handling of PREV(x)
+	  command
+
+2005-05-06 23:00  oetiker
+
+	* src/rrd_graph.c: * added RRDTOOL/TOBI OETIKER back in * in riggid
+	  mode, cut data and 'min' and 'max' not two above * gibt ytop0 a
+	  default value
+
+2005-05-06 22:59  oetiker
+
+	* src/rrd_tool.c: fixed documentation strings for rrdgraph
+
+2005-05-06 22:03  oetiker
+
+	* doc/rrdgraph.pod: added doc for new slope-mode
+
+2005-05-06 21:52  oetiker
+
+	* src/rrd_gfx.c, src/rrd_graph.c, src/rrd_graph.h: since the drawing
+	  code is now much simpler we do not need to perturbe the points or
+	  rewind the graph anymore this saves quite some time ...
+
+2005-05-06 15:44  oetiker
+
+	* src/rrd_graph_helper.c: * allow for 3(4) letter color names *
+	  better debugging code * fix tick, line, stack parsing -- Alex van
+	  den Bogaerdt <alex with ergens.op.het.net>
+
+2005-05-06 15:24  oetiker
+
+	* src/rrd_graph.c: if stacking on nothing we should not try to
+	  figure out WHAT we stacked on since this will result in a segfault
+	  ... -- Alex van den Bogaerdt <alex at ergens.op.het.net>
+
+2005-05-05 22:15  oetiker
+
+	* doc/rrdgraph_graph.pod: clarify LINE/AREA syntax -- Alex van den
+	  Bogaerdt alex with ergens.op.het.net
+
+2005-05-05 09:07  oetiker
+
+	* src/rrd_create.c: better not to write into argv elements ...
+	  Henrik Stoerner <henrik from hswn.dk>
+
+2005-05-03 20:23  oetiker
+
+	* src/rrd_tool.c: do not die upon wront input when in remote mode
+
+2005-05-03 18:10  oetiker
+
+	* doc/Makefile.am: install documentation into
+	  $PREFIX/shared/doc/rrdtool-$VERSION/{txt,html} but drop the
+	  rrdtool-$VERSION/ bit if $PREFIX matches on rrd assuming that the
+	  tool is being installed into a custom directory anyway.
+
+2005-05-03 17:24  oetiker
+
+	* doc/rrdgraph.pod, src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c:
+	  new options to tune how fontsmoothing works: -R/--font-render-mode
+	  {normal,light,mono} and -B/--font-smoothing-threshold size -- John
+	  yffffffff4271ef37 at f4n.org
+
+2005-05-03 17:22  oetiker
+
+	* NT-BUILD-TIPS.txt: note about win32comp
+
+2005-05-02 20:27  oetiker
+
+	* confignt/config.h, src/win32comp.c: files that help getting that
+	  native windows port going -- Philippe.Simonet with swisscom.com
+
+2005-05-02 19:47  oetiker
+
+	* src/rrd_gfx.c: when walking the bytes use the pitch not the width
+
+2005-05-02 19:33  oetiker
+
+	* src/strftime.c: pow is alreay used as a function ... so lets call
+	  it power instead
+
+2005-05-02 19:32  oetiker
+
+	* src/rrd_graph_helper.c: no infinite line width please
+
+2005-05-01 22:07  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h: prep for 1.2.1 release
+
+2005-05-01 22:04  oetiker
+
+	* src/rrd_graph.c: add some more vertical space above the graph if
+	  no title is available
+
+2005-05-01 21:24  oetiker
+
+	* src/rrd_gfx.c: use the pen to determine string length, do not look
+	  at the realy length, or space will get ignored.
+
+2005-05-01 21:16  oetiker
+
+	* src/DejaVuSansMono-Roman.ttf, src/Makefile.am, src/rrd_graph.c:
+	  DejaVuSansMono-Roman is a variant of VeraMono with lots of added
+	  unicode glyphes ... check out http://dejavu.sourceforge.net
+
+2005-05-01 20:49  oetiker
+
+	* src/rrd_graph.c: fix spaceing ... more space for the title and
+	  more space the the left of the yaxis lable
+
+2005-05-01 13:19  oetiker
+
+	* src/rrd_gfx.c: the multibyte support tried did not work ...
+	  takeing it out again
+
+2005-05-01 13:18  oetiker
+
+	* configure.ac: update tested library version
+
+2005-05-01 11:02  oetiker
+
+	* src/pngsize.c: undef jmpbuf to make compile work on AIX 5.1
+
+2005-05-01 11:00  oetiker
+
+	* src/Makefile.am: increasse revision of shared library number since
+	  the library source code has changed
+
+2005-05-01 11:00  oetiker
+
+	* src/rrd_gfx.c: add wide character support
+
+2005-05-01 10:42  oetiker
+
+	* src/rrd_graph.c: do not make the graph wider if the title does not
+	  fit ... this is wagging the dog the graph is not ABOUT the title
+
+2005-05-01 10:37  oetiker
+
+	* doc/rrdgraph_graph.pod: fix description of VRULE
+
+2005-05-01 10:23  oetiker
+
+	* bindings/perl-shared/RRDs.xs, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_fetch.c, src/rrd_first.c, src/rrd_graph.c,
+	  src/rrd_restore.c, src/rrd_tool.c, src/rrd_tune.c,
+	  src/rrd_update.c, src/rrd_xport.c: reset optind opterr inside the
+	  function calls ...
+
+2005-05-01 10:22  oetiker
+
+	* doc/rrdgraph_graph.pod: fixed documentation regarding floating
+	  point line width
+
+2005-05-01 10:20  oetiker
+
+	* src/rrd_graph_helper.c: relax parsing of LINE commands LINE: is
+	  valid as well as LINE<double>: eg. LINE1.2323:
+
+2005-05-01 09:16  oetiker
+
+	* src/rrd_gfx.c: allow for characters over 127
+
+2005-04-30 09:56  oetiker
+
+	* doc/rrdgraph_graph.pod: added notes on escaping colons in COMMENT
+	  and put deprecated forms of command to the back and not to the
+	  front
+
+2005-04-30 09:51  oetiker
+
+	* src/rrd_open.c, src/rrd_update.c: always open with rb/wb when it
+	  is a binary file ... unix and windows will work alike with this
+	  ...
+
+2005-04-30 09:48  oetiker
+
+	* src/rrdupdate.c: this file is not required ...
+
+2005-04-30 09:41  oetiker
+
+	* src/rrd_open.c: even better lets have rb for CYGWIN too ... one
+	  never knows it is windows after all.
+
+2005-04-30 09:40  oetiker
+
+	* src/rrd_open.c: oops inverted code here ... windows needs rb unix
+	  not
+
+2005-04-30 09:38  oetiker
+
+	* confignt/config.h, src/rrd_graph.c: let rrd_graph honor the font
+	  name (RRD_DEFAULT_FONT) defined in confignt/config.h
+
+2005-04-26 22:08  oetiker
+
+	* doc/rrdtool.pod: use pod syntax not html syntax in pod :-)
+
+2005-04-26 22:04  oetiker
+
+	* doc/cdeftutorial.pod, doc/rrd-beginners.pod, doc/rrdcreate.pod,
+	  doc/rrdgraph.pod: more fixes by fritz
+
+2005-04-26 05:33  oetiker
+
+	* CONTRIBUTORS: obfuscate email addresses
+
+2005-04-26 05:30  oetiker
+
+	* doc/rrdtool.pod: * remove jakes old address * add security warning
+
+2005-04-25 22:55  oetiker
+
+	* doc/rpntutorial.pod: remove pdf link
+
+2005-04-25 22:18  oetiker
+
+	* src/parsetime.c: use time_t to improve portability to 64bit
+	  systems -- John R Mocho <jmocho in royaldc.com>
+
+2005-04-25 21:01  oetiker
+
+	* NEWS: added new state
+
+2005-04-25 20:45  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, doc/rrdgraph_graph.pod, rrdtool.spec, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prep for 1.2.0
+	  release
+
+2005-04-25 19:07  oetiker
+
+	* doc/rpntutorial.pod, doc/rrdcgi.pod, doc/rrdfetch.pod,
+	  doc/rrdgraph_data.pod, doc/rrdgraph_examples.pod,
+	  doc/rrdgraph_graph.pod, doc/rrdgraph_rpn.pod, doc/rrdtutorial.pod:
+	  resolved all XXX situations
+
+2005-04-25 17:31  oetiker
+
+	* doc/bin_dec_hex.pod, doc/rpntutorial.pod, doc/rrdcgi.pod,
+	  doc/rrdfetch.pod, doc/rrdgraph_data.pod,
+	  doc/rrdgraph_examples.pod, doc/rrdgraph_graph.pod,
+	  doc/rrdgraph_rpn.pod, doc/rrdtool.pod, doc/rrdtune.pod,
+	  doc/rrdtutorial.pod, doc/rrdupdate.pod, doc/rrdxport.pod: another
+	  batch of fixes from fritz
+
+2005-04-24 22:21  oetiker
+
+	* CONTRIBUTORS: fixed contributiors listing
+
+2005-04-24 17:23  oetiker
+
+	* doc/rrddump.pod, doc/rrdfirst.pod, doc/rrdinfo.pod,
+	  doc/rrdlast.pod, doc/rrdresize.pod, doc/rrdrestore.pod,
+	  doc/rrdthreads.pod, doc/rrdtool-xport.dtd, doc/rrdtutorial.pod:
+	  big patch-up for the 1.2. Documents Revisited by Fritz Zaucker
+
+2005-04-22 18:35  oetiker
+
+	* NEWS, bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/Makefile.am, src/gdpng.c,
+	  src/gifsize.c, src/pngsize.c, src/rrd.h, src/rrd_afm.c,
+	  src/rrd_afm.h, src/rrd_afm_data.c, src/rrd_afm_data.h,
+	  src/rrd_cgi.c, src/rrd_create.c, src/rrd_datalang.c,
+	  src/rrd_diff.c, src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c,
+	  src/rrd_first.c, src/rrd_format.c, src/rrd_format.h,
+	  src/rrd_gfx.c, src/rrd_gfx.h, src/rrd_graph.c,
+	  src/rrd_graph_helper.c, src/rrd_hw.c, src/rrd_hw.h,
+	  src/rrd_info.c, src/rrd_is_thread_safe.h, src/rrd_last.c,
+	  src/rrd_not_thread_safe.c, src/rrd_open.c, src/rrd_resize.c,
+	  src/rrd_restore.c, src/rrd_rpncalc.c, src/rrd_rpncalc.h,
+	  src/rrd_stat.c, src/rrd_thread_safe.c, src/rrd_thread_safe_nt.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_tune.c, src/rrd_update.c,
+	  src/rrd_xport.c, src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc9
+	  release
+
+2005-04-19 21:09  oetiker
+
+	* doc/rrddump.pod, doc/rrdgraph.pod, doc/rrdgraph_data.pod,
+	  doc/rrdgraph_graph.pod, doc/rrdinfo.pod, doc/rrdresize.pod: fix
+	  titles
+
+2005-04-19 21:05  oetiker
+
+	* doc/bin_dec_hex.pod: fixed title
+
+2005-04-18 22:39  oetiker
+
+	* doc/Makefile.am, doc/cdeftutorial.pod, doc/rrd-beginners.pod,
+	  doc/rrdgraph.pod, doc/rrdgraph.src, doc/rrdgraph_data.pod,
+	  doc/rrdgraph_data.src, doc/rrdgraph_examples.pod,
+	  doc/rrdgraph_examples.src, doc/rrdgraph_graph.pod,
+	  doc/rrdgraph_graph.src, doc/rrdgraph_rpn.pod,
+	  doc/rrdgraph_rpn.src, doc/rrdinfo.pod, doc/rrdlast.pod,
+	  doc/rrdresize.pod, doc/rrdrestore.pod, doc/rrdtune.pod,
+	  doc/rrdtutorial.pod, doc/rrdupdate.pod, doc/rrdxport.pod: src
+	  moved back to pod. this include thing was a neat idea but it just
+	  adds another twist to things which is not necessary. fixed some
+	  pod errors
+
+2005-04-18 22:13  oetiker
+
+	* doc/rrdcgi.pod, doc/rrdcreate.pod, doc/rrddump.pod,
+	  doc/rrdfetch.pod, doc/rrdfirst.pod, doc/rrdgraph.src,
+	  doc/rrdgraph_data.src, doc/rrdgraph_examples.src,
+	  doc/rrdgraph_graph.src, doc/rrdgraph_rpn.src, doc/rrdtool.pod:
+	  misc fixes for better display
+
+2005-04-18 11:07  oetiker
+
+	* doc/rrdgraph_graph.src, branches/1.2/website,
+	  branches/1.2/website/bin, branches/1.2/website/doc,
+	  branches/1.2/website/tut: fixed format
+
+2005-04-17 22:43  oetiker
+
+	* doc/bin_dec_hex.pod, doc/rrd-beginners.pod, doc/rrdcgi.pod,
+	  doc/rrdcreate.pod, doc/rrddump.pod, doc/rrdfetch.pod,
+	  doc/rrdfirst.pod, doc/rrdgraph.src, doc/rrdgraph_data.src,
+	  doc/rrdgraph_examples.src, doc/rrdgraph_graph.src,
+	  doc/rrdgraph_rpn.src, doc/rrdinfo.pod, doc/rrdlast.pod,
+	  doc/rrdresize.pod, doc/rrdrestore.pod, doc/rrdthreads.pod,
+	  doc/rrdtune.pod, doc/rrdupdate.pod, doc/rrdxport.pod: fixed many
+	  pod bugs while creating the new website
+
+2005-04-17 17:29  oetiker
+
+	* doc/rrdgraph.src: make sure argument descriptions comply with Bold
+	  = fixed and Italics = variable
+
+2005-04-17 16:26  oetiker
+
+	* doc/rrdcreate.pod: fix use of =item commands
+
+2005-04-17 16:25  oetiker
+
+	* doc/Makefile.am: allow to build pods (for website)
+
+2005-04-13 22:00  oetiker
+
+	* src/rrd_graph.c: * draw the axis last to have them always on top *
+	  use a smaller font for labeling the axis
+
+2005-04-13 19:53  oetiker
+
+	* src/rrd_gfx.c: have better default compression
+
+2005-04-13 19:53  oetiker
+
+	* src/rrd_graph.c: tune fontsizes and spacing to be more in line
+	  with rrdtool 1.0
+
+2005-04-12 21:52  oetiker
+
+	* src/rrd_graph.c: prep for 1.2rc8 release
+
+2005-04-12 21:10  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc8 release
+
+2005-04-12 20:56  oetiker
+
+	* src/rrd_graph.c, src/rrd_graph.h: * better fix for units-exponent
+	  issue ... now the whole scaling happens only at print time ...
+	  this is more stable -- tobi * remove the newline from ctime (%c)
+	  in VDEF -- alex
+
+2005-04-11 23:23  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc7 release
+
+2005-04-11 23:22  oetiker
+
+	* doc/rrdgraph.src, src/rrd_graph.c, src/rrd_graph.h,
+	  src/rrd_tool.c: * adjusted element spacing within the graph *
+	  re-intruduced --units-length option * stabilized --units-exponent
+	  option by jumping to alt-y-grid mode once the default autogrid can
+	  not cope with the data anymore.
+
+2005-04-11 23:20  oetiker
+
+	* NEWS: added note about incompatible changes
+
+2005-04-11 12:29  oetiker
+
+	* NEWS: started change log
+
+2005-04-11 12:17  oetiker
+
+	* doc/rrdgraph_rpn.src: added notes on INF
+
+2005-04-11 09:51  oetiker
+
+	* src/Makefile.am, src/art_rgb_affine_private.h,
+	  src/art_rgba_rgba_affine.c, src/art_rgba_rgba_affine.h,
+	  src/art_rgba_svp.c, src/art_rgba_svp.h, src/rrd_gfx.c,
+	  src/rrd_gfx.h, src/rrd_graph.c: * we are now creating true RGBA
+	  pngs * removed all memory leeks from rrd_gfx
+
+2005-04-10 22:02  oetiker
+
+	* NEWS: started updating for 1.2 release
+
+2005-04-10 18:11  oetiker
+
+	* doc/rrdresize.pod: clarified output -- alex
+
+2005-04-10 18:10  oetiker
+
+	* doc/name.inc, doc/rrdgraph.src, doc/rrdgraph_data.src,
+	  doc/rrdgraph_examples.src, doc/rrdgraph_graph.src,
+	  doc/rrdgraph_rpn.src: get the docs ready for the 1.2 release.
+	  remove notes about things that never got implemented. -- alex
+
+2005-04-10 18:05  oetiker
+
+	* src/rrd_graph.c: do not draw AREAS that have no hight (done
+	  right). draw an arrow on the positiv y axis.
+
+2005-04-10 15:35  oetiker
+
+	* doc/rrdtutorial.pod: updated for 1.2 release -- alex
+
+2005-04-10 14:00  oetiker
+
+	* src/rrd_gfx.c: fixed typo -- alex
+
+2005-04-10 13:57  oetiker
+
+	* doc/rrdcgi.pod: G<gt> does not exist E<gt> does
+
+2005-04-10 12:12  oetiker
+
+	* doc/rrdcreate.pod, doc/rrdxport.pod, src/rrd_graph_helper.c,
+	  src/rrd_tool.c: fixed spelling and working -- Alex van den
+	  Bogaerdt alex at ergens.op.het.net
+
+2005-04-10 11:53  oetiker
+
+	* NT-BUILD-TIPS.txt, confignt/config.h, src/strftime.c,
+	  src/strftime.h: added extra strftime.[ch] which supports ISO 8601
+	  week numbers, together with instructions in the NT-BUILD-TIPPS
+	  file
+
+2005-04-10 11:33  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc6 release
+
+2005-04-10 11:31  oetiker
+
+	* src/rrd_graph.c: remove excess comment
+
+2005-04-10 11:30  oetiker
+
+	* configure.ac, src/Makefile.am: make --disable-perl work allow
+	  configuration of the default font at configure time
+
+2005-04-10 11:29  oetiker
+
+	* src/rrd_gfx.c, src/rrd_graph.c, src/rrd_graph_helper.c: revamped
+	  drawing routines to be less complex and more stable. be kind to
+	  libart
+
+2005-04-10 09:38  oetiker
+
+	* src/rrd_graph.c: allow --color arguments with RRGGBB and not only
+	  RRGGBBAA
+
+2005-04-10 09:16  oetiker
+
+	* bindings/perl-shared/Makefile.PL: everyone has other names for
+	  their shared libraries, so lets drop the dependency
+
+2005-04-10 09:15  oetiker
+
+	* bindings/perl-shared/RRDs.pm: mention updatev in the synopsis
+
+2005-04-09 14:21  oetiker
+
+	* TODO: we do have 95%
+
+2005-04-07 21:35  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc5 release
+
+2005-04-07 21:31  oetiker
+
+	* src/rrd_graph.c: fix implementation of --only-graph
+
+2005-04-07 21:31  oetiker
+
+	* src/rrd_gfx.c: make libart happy by NOT adjusting coordinates and
+	  by using the ART_WIND_RULE_NONZERO winding rule
+
+2005-04-07 21:30  oetiker
+
+	* src/rrd_tool.c: return propper exit codes
+
+2005-04-07 20:07  oetiker
+
+	* src/rrd_graph.h: fix bitpatterns of extraflags so that they do not
+	  interfear
+
+2005-04-06 23:58  oetiker
+
+	* bindings/Makefile.am: prep for 1.2rc4 release
+
+2005-04-06 23:24  oetiker
+
+	* Makefile.am, bindings/Makefile.am, bindings/perl-piped/RRDp.pm,
+	  bindings/perl-shared/Makefile.PL, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc4 release
+
+2005-04-06 23:18  oetiker
+
+	* doc/rrdgraph.src: document RRD_DEFAULT_FONT environment variable
+
+2005-04-06 22:40  oetiker
+
+	* src/rrd_afm.c, src/rrd_cgi.c, src/rrd_graph.c, src/rrd_nan_inf.c,
+	  src/rrd_open.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_tool.c, src/rrd_tool.h, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrdupdate.c: make sure WIN32 sections do NOT kick in for
+	  cygwin compiles
+
+2005-04-05 22:49  oetiker
+
+	* src/rrd_gfx.c: only unwind the areas, the lines should be fine by
+	  themselves!
+
+2005-04-05 20:32  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec, src/gdpng.c, src/gifsize.c,
+	  src/pngsize.c, src/rrd.h, src/rrd_afm.c, src/rrd_afm.h,
+	  src/rrd_afm_data.c, src/rrd_afm_data.h, src/rrd_cgi.c,
+	  src/rrd_create.c, src/rrd_datalang.c, src/rrd_diff.c,
+	  src/rrd_dump.c, src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc3 release
+
+2005-04-05 20:17  oetiker
+
+	* src/rrd_gfx.c, src/rrd_graph.c: * fix transparency rendering by
+	  rewinding the paths propperly * fix x-axis label drawing by
+	  considering label precision
+
+2005-04-05 19:14  oetiker
+
+	* src/VeraMono.ttf: new originaly copy
+
+2005-04-05 19:12  oetiker
+
+	* src/VeraMono.ttf: fixed propperties to have a RAW font
+
+2005-04-04 21:56  oetiker
+
+	* configure.ac: make configure work even when no prefix is specified
+
+2005-04-04 21:40  oetiker
+
+	* src/gdpng.c, src/gifsize.c, src/pngsize.c, src/rrd.h,
+	  src/rrd_afm.c, src/rrd_afm.h, src/rrd_afm_data.c,
+	  src/rrd_afm_data.h, src/rrd_cgi.c, src/rrd_create.c,
+	  src/rrd_datalang.c, src/rrd_diff.c, src/rrd_dump.c,
+	  src/rrd_error.c, src/rrd_fetch.c, src/rrd_first.c,
+	  src/rrd_format.c, src/rrd_format.h, src/rrd_gfx.c, src/rrd_gfx.h,
+	  src/rrd_graph.c, src/rrd_graph_helper.c, src/rrd_hw.c,
+	  src/rrd_hw.h, src/rrd_info.c, src/rrd_is_thread_safe.h,
+	  src/rrd_last.c, src/rrd_not_thread_safe.c, src/rrd_open.c,
+	  src/rrd_resize.c, src/rrd_restore.c, src/rrd_rpncalc.c,
+	  src/rrd_rpncalc.h, src/rrd_stat.c, src/rrd_thread_safe.c,
+	  src/rrd_thread_safe_nt.c, src/rrd_tool.c, src/rrd_tool.h,
+	  src/rrd_tune.c, src/rrd_update.c, src/rrd_xport.c,
+	  src/rrd_xport.h, src/rrdupdate.c: prep for 1.2rc2 release
+
+2005-04-04 21:22  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm,
+	  configure.ac, rrdtool.spec: prepared for 1.2rc2 release
+
+2005-04-04 21:21  oetiker
+
+	* configure.ac: prepared for 1.2rc1 release
+
+2005-04-04 21:12  oetiker
+
+	* acinclude.m4, configure.ac: prepared for 1.2rc1 release
+
+2005-04-04 21:07  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm:
+	  prepared for 1.2rc1 release
+
+2005-04-04 21:05  oetiker
+
+	* bindings/perl-piped/RRDp.pm, bindings/perl-shared/RRDs.pm:
+	  prepared for 1.2rc1 release
+
+2005-04-04 20:56  oetiker
+
+	* configure.ac: fixed prefix detection code again
+
+2005-04-04 20:53  oetiker
+
+	* configure.ac: fixed autoprefix
+
+2005-04-04 20:48  oetiker
+
+	* configure.ac: fixed config script for prefixing
+
+2005-04-04 20:37  oetiker
+
+	* 00README, COPYRIGHT, NEWS, PROJECTS, README, TODO, acinclude.m4,
+	  configure.ac, rrdtool.spec: get ready for 1.2
+
+2005-04-04 19:55  oetiker
+
+	* branches/1.2: branche for 1.2
+

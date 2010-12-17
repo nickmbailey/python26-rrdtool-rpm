@@ -1,0 +1,23 @@
+RRDLASTUPDATE(1)                    rrdtool                   RRDLASTUPDATE(1)
+
+
+
+NNAAMMEE
+       rrdlastupdate - Return the most recent update to an RRD
+
+SSYYNNOOPPSSIISS
+       rrrrddttooooll llaassttuuppddaattee _f_i_l_e_n_a_m_e
+
+DDEESSCCRRIIPPTTIIOONN
+       The llaassttuuppddaattee function returns the UNIX timestamp and the value stored
+       for each datum in the most recent update of an RRD.
+
+       _f_i_l_e_n_a_m_e
+               The name of the RRRRDD that contains the data.
+
+AAUUTTHHOORR
+       Andy Riebs <andy.riebs@hp.com>
+
+
+
+1.2.27                            2008-02-17                  RRDLASTUPDATE(1)
