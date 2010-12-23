@@ -8,6 +8,7 @@ ORIG_NAME="rrdtool-1.2.27/"
 NAME="python26-rrdtool"
 RELEASE=1
 PACKAGER="Nick Bailey - nick@riptano.com"
+DOC_FILES="ACKNOWLEDGEMENT, AUTHORS, COPYING, README"
 REQUIRES=""
 BUILD_REQUIRES=""
 
@@ -33,7 +34,8 @@ python2.6 setup.py bdist_rpm \
         --python="python2.6" \
         --dist-dir="$CUR_DIR" \
         --release="$RELEASE" \
-        --packager="$PACKAGER" 
+        --packager="$PACKAGER" \
+        --doc-files="$DOC_FILES"
 cd ..
 
 rm -rf "$CUR_DIR/$NAME"

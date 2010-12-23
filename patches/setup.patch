@@ -1,6 +1,6 @@
 --- a/bindings/python/setup.py	2008-02-17 10:26:32.000000000 +0000
-+++ b/bindings/python/setup.py	2010-12-17 20:24:36.000000000 +0000
-@@ -31,11 +31,11 @@
++++ b/bindings/python/setup.py	2010-12-20 02:17:15.000000000 +0000
+@@ -31,12 +31,12 @@
  from distutils.core import setup, Extension
  import sys, os
  
@@ -11,7 +11,9 @@
  include_dir = os.environ.get('INCDIR', RRDBASE)
  
 -setup(name = "py-rrdtool",
+-      version = "0.2.1",
 +setup(name = "python26-rrdtool",
-       version = "0.2.1",
++      version = "1.2.27",
        description = "Python Interface to RRDTool",
        author = "Hye-Shik Chang",
+       author_email = "perky@fallin.lv",
