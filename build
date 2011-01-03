@@ -9,7 +9,7 @@ NAME="python26-rrdtool"
 RELEASE=1
 PACKAGER="Nick Bailey - nick@riptano.com"
 DOC_FILES="ACKNOWLEDGEMENT, AUTHORS, COPYING, README"
-REQUIRES="rrdtool"
+REQUIRES=""
 BUILD_REQUIRES=""
 
 # copy to a directory for building
@@ -35,8 +35,7 @@ python2.6 setup.py bdist_rpm \
         --dist-dir="$CUR_DIR" \
         --release="$RELEASE" \
         --packager="$PACKAGER" \
-        --doc-files="$DOC_FILES" \
-        --requires="$REQUIRES"
+        --doc-files="$DOC_FILES"
 cd ..
 
 rm -rf "$CUR_DIR/$NAME"
